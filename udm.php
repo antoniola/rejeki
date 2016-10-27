@@ -16,7 +16,7 @@ echo '<html><head>
 <style>
 body{
 	background-image: url(http://4.bp.blogspot.com/-RbaCuWyoN3c/U9-IWbh17wI/AAAAAAAAAto/I8zpRHIP0Gg/s1600/kbk29185-227a592.gif);
-	color: #FF9933;
+	color: #;
 	text-align: center;
 	font-family: Century Gothic;
 	font-size: 14pt;
@@ -25,14 +25,14 @@ body{
 	padding: 0px;
 }
 a {
-color:#fff;
+color:#;
 }
 a:hover {
 color:lime;
 }
 td, th, p, li,table{
-	background: #2e2b28;
-	border:1px solid #524f46;
+	background: #;
+	border:1px solid #;
 	text-align: center;
 	-moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -40,7 +40,7 @@ border-radius: 5px;
 }
 .result {
 padding: 15px;
-border: 1px solid #CCC;
+border: 1px solid #;
 width: 500px;
 margin: 0 auto;
 border-radius: 10px;
@@ -50,8 +50,8 @@ border-radius: 10px;
 input{
 	border: 1px solid;
 	overflow: hidden;
-	background: #2e2b28;
-	color: #FF9933;
+	background: #;
+	color: #;
 	-moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
@@ -59,8 +59,8 @@ border-radius: 5px;
 textarea{
 	border: 1px solid;
 	overflow: hidden;
-	background: #2e2b28;
-	color: #FF9933;
+	background: #;
+	color: #;
 	-moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
@@ -75,8 +75,8 @@ color: rgb(255, 255, 255);
 	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
 	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
 	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	color:#333;
-	background-color:#FA2;
+	color:#;
+	background-color:#;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -86,11 +86,11 @@ color: rgb(255, 255, 255);
 	font-weight:700;
 	height:32px;
 	padding:4px 16px;
-	text-shadow:#FE6 0 1px 0
+	text-shadow:# 0 1px 0
 }
 </style>
 </head><body>';
-echo '<div style="font-family: Iceland;font-size: 35pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">User Domain</sub></div><br/>';
+echo '<div style="font-family: Iceland;font-size: 35pt;text-shadow: 0 0 6px #, 0 0 5px #, 0 0 5px #;color: #">User Domain</sub></div><br/>';
  
 echo "<center>";
 $d0mains = @file('/etc/named.conf');
@@ -176,10 +176,10 @@ echo '</center>';
  
 }
 }else{
-echo "<div class='result'><i><font color='#FF0000'>ERROR</font><br><font color='#FF0000'>/var/named</font> or <font color='#FF0000'>etc/named.conf</font> Not Accessible!</i></div>";
+echo "<div class='result'><i><font color='#'>ERROR</font><br><font color='#'>/var/named</font> or <font color='red'>etc/named.conf</font> Not Accessible!</i></div>";
 }
  
-echo "<br>&#169; <font color='#FF0000'>Ora Ketemu</font>";
+echo "<br>&#169; <font color='red'>Ora Ketemu</font>";
 ?>
 
 <?php
