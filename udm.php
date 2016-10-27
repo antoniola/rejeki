@@ -179,7 +179,7 @@ echo '</center>';
 echo "<div class='result'><i><font color='#'>ERROR</font><br><font color='#'>/var/named</font> or <font color='red'>etc/named.conf</font> Not Accessible!</i></div>";
 }
  
-echo "<br>&#169; <font color='red'>^_^</font>";
+echo "<br>&#169; <font color='red'> ^_^ </font>";
 ?>
 
 <?php
