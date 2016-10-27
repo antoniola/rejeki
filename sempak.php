@@ -535,7 +535,7 @@ echo "    <td valign=\"top\" colspan=\"6\"><center><input type=\"submit\" value=
 echo "    </tr>\n"; 
 echo "</form>\n"; 
 echo "<tr>\n"; 
-echo "<td valign=\"top\" colspan=\"6\" style=\"border-top:1px solid #1b2;\"><center>Recoded By : D3R! &copy; | Indonesia Fighter Cyber | 2013</center></td>\n"; 
+echo "<td valign=\"top\" colspan=\"6\" style=\"border-top:1px solid #1b2;\"><center>Recoded By : HsH &copy; | Indonesia Fighter Cyber | 2013</center></td>\n"; 
 echo "</tr>\n"; 
 echo "</table>\n"; 
 echo "</body>\n"; 
