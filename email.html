@@ -1,1 +1,593 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Pemisah Email</title><link rel="SHORTCUT ICON" href="http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif"><font class="hk2" style="text-shadow: 1px -1px 8px;"> <script language="javascript" type="text/javascript"> function copy() { textRange = document.extractor.output.createTextRange(); textRange.execCommand("RemoveFormat"); textRange.execCommand("Copy"); } function paste() { textRange = document.extractor.input.createTextRange(); textRange.execCommand("RemoveFormat"); textRange.execCommand("Paste"); } function help(){ var imgwid = 450; var imghgt = 360; content = ('<html><head><title>Pemisah Email</title>'); content += ('<style type="text/css">'); content += ('body,td,th,ul,p       { font: normal normal normal 8pt/1em Verdana; color: #000; }'); content += ('</style>'); content += ('</head><body onload="window.focus();">'); content += ('<strong>PENGUMUMAN <br> Silahkan Di Translate Sendiri </strong>'); content += ('<ol>'); content += ('<li>Copy all text from any webpages, documents, files, etc...</li>'); content += ('<li>Paste it into <strong>Input Window</strong>.</li>'); content += ('<li>Click "<em>Extract</em>" button.</li>'); content += ('<li>Copy the result from <strong>Output Window</strong> to somewhere and save it.</li>'); content += ('<li>Click "<em>Reset</em>" button to start all over again.</li>'); content += ('</ol>'); content += ('<br /><br /><strong>More Controls</strong>'); content += ('<ol>'); content += ('<li>Click "<em>Paste Input</em>" link to paste any text you copied elsewhere into <strong>Input Window</strong>.</li>'); content +=  '<li>Click "<em>Copy Output</em>" link to copy whatever text inside <strong>Output Window</strong>.</li>'); content += ('<li>Choose different separator from the dropdown menu or specify your own. Default is comma.</li>'); content += ('<li>You can group a number of emails together. Each group is separated by a new line. Please enter number only.</li>'); content += ('<li>Check "<em>Sort Alphabetically</em>" checkbox to arrange extracted emails well... alphabetically.</li>'); content += ('<li>You can extract or exclude emails containing certain string (text). Useful if you only want to get email from a particular domain.</li>'); content += ('<li>You can choose to extract web addresses instead of email addresses.</li>'); content += ('</ol>'); content += ('<div align="center"><input type="button" value="Close" onClick="javascript:window.close();" /></div>'); content += ('</body></html>'); var winl = (screen.width - imgwid) / 2; var wint = (screen.height - imghgt) / 2; helpwindow = window.open('','help','width=' + imgwid + ',height=' + imghgt + ',resizable=0,scrollbars=0,top=' + wint + ',left=' + winl + ',toolbar=0,location=0,directories=0,status=0,menubar=0,copyhistory=0'); helpwindow.document.write(content); helpwindow.document.close(); } function checksep(value){ if (value) document.extractor.sep.value = "other"; } function numonly(value){ if (isNaN(value)) { window.alert("Please enter a number or else \nleave blank for no grouping."); document.extractor.groupby.focus(); } } function findEmail() { var email = "none"; var a = 0; var ingroup = 0; va separator = document.extractor.sep.value; var string = document.extractor.string.value; var groupby = Math.round(document.extractor.groupby.value); var address_type = document.extractor.address_type.value;var input = document.extractor.input.value; if (document.extractor.lowcase.checked) { var input = input.toLowerCase(); } if (separator == "new") separator = "\n"; if (separator == "other") separator = document.extractor.othersep.value; if (address_type == "web") { rawemail = input.match(/([A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_%&\?\/.=]+)/gi); } else { rawemail = input.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi); }  var norepeat = new Array(); var filtermail = new Array(); if (rawemail) { if (string){ x = 0; for (var y=0; y<rawemail.length; y++) { if (document.extractor.filter_type.value == 1) { if (rawemail[y].search(string) >= 0) { filtermail[x] = rawemail[y]; x++; } } else { if (rawemail[y].search(string) < 0) { filtermail[x] = rawemail[y]; x++; } } } rawemail = filtermail; } for (var i=0; i<rawemail.length; i++) { var repeat = 0; for (var j=i+1; j<rawemail.length; j++) { if (rawemail[i] == rawemail[j]) { repeat++; } }  if (repeat == 0) { norepeat[a] = rawemail[i]; a++; } } if (document.extractor.sort.checked) norepeat = norepeat.sort();  email = ""; for (var k = 0; k < norepeat.length; k++) { if (ingroup != 0) email += separator; email += norepeat[k]; ingroup++; if (groupby) { if (ingroup == groupby) { email += '\n\n'; ingroup = 0; } } } } var count = norepeat.length; document.extractor.count.value = count; document.extractor.output.value = email; } </script><style type="text/css" media="screen"> body,table{background:  ; font-family:Verdana,tahoma; color: Darkviolet ; font-size:10px } A:link {text-decoration: none;color: aqua;} A:active {text-decoration: none;color: aqua;} A:visited {text-decoration: none;color: lime;} A:hover {text-decoration: underline; color: Fuchsia;} #new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;} input:hover,tr:hover,td:hover{background-color:  ; color: aqua;} body { background:#; } body,td,th,ul,p { font: normal normal normal 8pt/1em # ; color: #violet; } textarea,input,select { font: normal normal normal 8pt/1em # ; color: #; background:#; } a:link, a:visited { text-decoration: none; color: #; } a:active, a:hover { text-decoration: underline; color: #; } fieldset { padding-left: 10px; padding-bottom: 10px;  border:1px solid #; } legend { font: normal normal bold 9pt Arial; color: #; } .bordercolor { background:#; } .maincolor { background:#; border:1px solid #; } .button { background:#; } .titlebarcolor { background:#; } .titlefont { font: normal normal bold 9pt/1em Arial; color: #; text-decoration:none; }  .copyrightfont, .copyrightfont a { font: normal normal bold 9pt/1em Arial; color: #; text-decoration:none; } </style><style type="text/css"></style> <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><script language="JavaScript">function tb5_makeArray(n){ this.length = n; return this.length; } tb5_messages = new tb5_makeArray(2); tb5_messages[0] = "Antonio"; b5_messages[1] = "HsH"; tb5_rptType = 'infinite'; tb5_rptNbr = 100; tb5_speed = 200; tb5_delay = 50; var tb5_counter=1; var tb5_currMsg=0; var tb5_stsmsg=""; function tb5_shuffle(arr){ var k; for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp; } return arr; } tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = tb5_shuffle(tb5_arr); function tb5_init(n){ var k; if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay; } else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp); } function tb5_randomizetitle(){ tb5_init(0); } tb5_randomizetitle();</script><script> TypingText = function(element, interval, cursor, finishedCallback) { if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) { this.running = true;  } TypingText.all = new Array(); TypingText.currentIndex = 0; TypingText.runAll = function() { for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run(); } TypingText.prototype.run = function() { if(this.running) return; if(typeof this.origText == "undefined") { setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : ""); this.currentChar++; setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); } else { this.currentText = ""; this.currentChar = 0; this.running = false; this.finishedCallback(); } }</script></head><body><style type="text/css"> body { background: black url("http://2.bp.blogspot.com/-Gc5k--PvR5s/Ue3pzaZxNmI/AAAAAAAABKA/SRaz-fAXYv0/s200/0_1_1.gif"); background-repeat: repeat; background-position: center; background-attachment: fixed; } </style><style>*{ font-family:tahoma; font-size:12; } input, textarea,select { border: 1px solid #626262; } </style><div align="center"><form name="extractor" action="#" method="get"><table class="maincolor" cellpadding="4" cellspacing="0" border="0" width="600"><tr class="titlebarcolor" valign="middle"> <td align="left" class="titlefont"><center><h3><font color = "white ">Paste disini</font></h3></center></td><td align="right" class="copyrightfont"><center><h3><font color = "white ">Hasilnya</font></h3></center></td></tr><tr><td valign="top" align="center" width="50%"><strong></strong><br /><textarea  bgcolor="#"name="input" rows="8" cols="25" style="width:98%"></textarea></td><td valign="top" align="center" width="50%"><strong></strong><br /><textarea name="output" rows="8" cols="25" style="width:98%" readonly="readonly"></textarea></td></tr><tr><td valign="top" align="center"><script language="javascript" type="text/javascript">if ((navigator.appName=="Microsoft Internet Explorer")&&(parseInt(navigator.appVersion)>=4)) document.write('<a href="#" onClick="paste();">Paste Input</a>'); else document.write('Masukan Sript nya'); </script></td><td valign="top" align="center"><script language="javascript" type="text/javascript">if ((navigator.appName=="Microsoft Internet Explorer")&&(parseInt(navigator.appVersion)>=4)) document.write('<a href="#" onClick="copy();">Copy Output</a>');else document.write('Hasil Yang Sudah Jadi'); </script></td></tr><tr><td valign="top" align="left" colspan="2" style="border-bottom:1px solid #999999;"></td></tr><tr><td valign="top" align="left"><br /> <input type="button" class="button" value="Extract" onclick="findEmail();" />  <input type="reset" class="button" value="Reset" />&nbsp;&nbsp;&nbsp; <a href="#" onclick="help();"><em>Info</em></a></td><td valign="top" align="right" nowrap="nowrap"><br />Jumlah yang keluar: <input name="count" size="5" readonly="readonly" /></td></tr><tr><td valign="top" align="left" colspan="2"><fieldset title="Output Option"><legend align="left"><strong>Setelan</strong></legend><br />Alat pemisah: <select name="sep"><option value="new" selected="selected">New Line</option><option value="|">Pipe</option><option value=" : ">Colon</option><option value=", ">Coma</option><option value="other">Other</option></select><input type="text" name="othersep" size="3" onblur="checksep(this.value);" />&nbsp;<label for="sortbox"><input type="checkbox" name="sort" id="sortbox" />Urutkan abjad</label>&nbsp;<label for="casebox"><input type="checkbox" name="lowcase" id="casebox" checked="checked" />Menjadikan huruf kecil</label><br /><br />Group: <input type="text" size="3" name="groupby" onblur="numonly(this.value);" /> Alamat <small>(kelompok akan dipisahkan oleh paragraf baru)</small></fieldset><br /><fieldset title="Filter Option"><legend align="left"><strong>Filter Option</strong></legend><br /><select name="filter_type"><option value="1" selected="selected">Only</option><option value="0">Do not</option> </select>extract address containing this string: <input type="text" size="20" name="string" /><br /><br />Type of address to extract: <select name="address_type"><option value="email" selected="selected">Email</option><option value="web">URL</option></select></fieldset><br /><div align="right"><a href="https://www.facebook.com/Antonio.HsH" title="Hacker Sakit Hati" target="_blank"><strong>Get latest version</strong></a></div></td></tr></table></form></div></body></html>
+<font class="hk2" style="text-shadow: 1px -1px 8px;"> 
+<script language="javascript" type="text/javascript">
+<!-- Begin
+
+// Created by Benjamin Leow and Copyrighted by Antonio HsH
+// Please do not remove the copyright notice. Thank you.
+// Please go to https://www.facebook.com/Antonio.HsH for latest version and more freeware
+
+function copy() {
+	textRange = document.extractor.output.createTextRange();
+	textRange.execCommand("RemoveFormat");
+	textRange.execCommand("Copy");
+}
+
+function paste() {
+	textRange = document.extractor.input.createTextRange();
+	textRange.execCommand("RemoveFormat");
+	textRange.execCommand("Paste");
+}
+
+function help(){
+
+	var imgwid = 450;
+	var imghgt = 360;
+	
+	content = ('<html><head><title>Pemisah Email</title>');
+	content += ('<style type="text/css">');
+	content += ('body,td,th,ul,p       { font: normal normal normal 8pt/1em Verdana; color: #000; }');
+	content += ('</style>');
+	content += ('</head><body onload="window.focus();">');
+	content += ('<strong>PENGUMUMAN <br> Silahkan Di Translate Sendiri </strong>');
+	content += ('<ol>');
+	content += ('<li>Copy all text from any webpages, documents, files, etc...</li>');
+	content += ('<li>Paste it into <strong>Input Window</strong>.</li>');
+	content += ('<li>Click "<em>Extract</em>" button.</li>');
+	content += ('<li>Copy the result from <strong>Output Window</strong> to somewhere and save it.</li>');
+	content += ('<li>Click "<em>Reset</em>" button to start all over again.</li>');
+	content += ('</ol>');
+	content += ('<br /><br /><strong>More Controls</strong>');
+	content += ('<ol>');
+	content += ('<li>Click "<em>Paste Input</em>" link to paste any text you copied elsewhere into <strong>Input Window</strong>.</li>');
+	content += ('<li>Click "<em>Copy Output</em>" link to copy whatever text inside <strong>Output Window</strong>.</li>');
+	content += ('<li>Choose different separator from the dropdown menu or specify your own. Default is comma.</li>');
+	content += ('<li>You can group a number of emails together. Each group is separated by a new line. Please enter number only.</li>');
+	content += ('<li>Check "<em>Sort Alphabetically</em>" checkbox to arrange extracted emails well... alphabetically.</li>');
+	content += ('<li>You can extract or exclude emails containing certain string (text). Useful if you only want to get email from a particular domain.</li>');
+	content += ('<li>You can choose to extract web addresses instead of email addresses.</li>');
+	content += ('</ol>');
+	content += ('<div align="center"><input type="button" value="Close" onClick="javascript:window.close();" /></div>');
+	content += ('</body></html>');
+	
+	var winl = (screen.width - imgwid) / 2;
+	var wint = (screen.height - imghgt) / 2;
+	helpwindow = window.open('','help','width=' + imgwid + ',height=' + imghgt + ',resizable=0,scrollbars=0,top=' + wint + ',left=' + winl + ',toolbar=0,location=0,directories=0,status=0,menubar=0,copyhistory=0');
+	helpwindow.document.write(content);
+	helpwindow.document.close();
+}
+
+function checksep(value){
+	if (value) document.extractor.sep.value = "other";
+}
+
+function numonly(value){
+	if (isNaN(value)) {
+		window.alert("Please enter a number or else \nleave blank for no grouping.");
+		document.extractor.groupby.focus();
+	}
+}
+
+function findEmail() {
+	var email = "none";
+	var a = 0;
+	var ingroup = 0;
+	var separator = document.extractor.sep.value;
+	var string = document.extractor.string.value;
+	var groupby = Math.round(document.extractor.groupby.value);
+	var address_type = document.extractor.address_type.value;
+	var input = document.extractor.input.value;
+	
+	if (document.extractor.lowcase.checked) {
+		var input = input.toLowerCase();
+	}
+	
+	if (separator == "new") separator = "\n";
+	if (separator == "other") separator = document.extractor.othersep.value;
+	
+	if (address_type == "web") {
+		rawemail = input.match(/([A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_%&\?\/.=]+)/gi);
+	} else {
+		rawemail = input.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+	}
+	
+	var norepeat = new Array();
+	var filtermail = new Array();
+	if (rawemail) {
+		if (string){
+			x = 0;
+			for (var y=0; y<rawemail.length; y++) {
+				if (document.extractor.filter_type.value == 1) {
+					if (rawemail[y].search(string) >= 0) {
+						filtermail[x] = rawemail[y];
+						x++;
+					}
+				} else {
+					if (rawemail[y].search(string) < 0) {
+						filtermail[x] = rawemail[y];
+						x++;
+					}
+				}
+			}
+			rawemail = filtermail;
+		}
+	
+		for (var i=0; i<rawemail.length; i++) {
+			var repeat = 0;
+			
+			// Check for repeated emails routine
+			for (var j=i+1; j<rawemail.length; j++) {
+				if (rawemail[i] == rawemail[j]) {
+					repeat++;
+				}
+			}
+			
+			// Create new array for non-repeated emails
+			if (repeat == 0) {
+				norepeat[a] = rawemail[i];
+				a++;
+			}
+		}
+		if (document.extractor.sort.checked) norepeat = norepeat.sort(); // Sort the array
+		email = "";
+		// Join emails together with separator
+		for (var k = 0; k < norepeat.length; k++) {
+			if (ingroup != 0) email += separator;
+			email += norepeat[k];
+			ingroup++;
+			
+			// Group emails if a number is specified in form. Each group will be separate by new line.
+			if (groupby) {
+				if (ingroup == groupby) {
+					email += '\n\n';
+					ingroup = 0;
+				}
+			}
+		}
+	}
+	
+	// Return array length
+	var count = norepeat.length;
+	
+	// Print results
+	document.extractor.count.value = count;
+	document.extractor.output.value = email;
+}
+//  End -->
+</script>
+<style type="text/css" media="screen">
+body,table{background:  ; font-family:Verdana,tahoma; color: Darkviolet ; font-size:10px }
+A:link {text-decoration: none;color: aqua;}
+A:active {text-decoration: none;color: aqua;}
+A:visited {text-decoration: none;color: lime;}
+A:hover {text-decoration: underline; color: Fuchsia;}
+#new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;}
+input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
+body {
+	background:#;
+	}
+
+body,td,th,ul,p {
+	font: normal normal normal 8pt/1em # ;
+	color: #violet;
+	}
+
+textarea,input,select {
+	font: normal normal normal 8pt/1em # ;
+	color: #;
+	background:#;
+	}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #;
+	}
+
+a:active, a:hover {
+	text-decoration: underline;
+	color: #;
+	}
+
+fieldset {
+	padding-left: 10px; 
+	padding-bottom: 10px; 
+	border:1px solid #;
+	}
+
+legend {
+	font: normal normal bold 9pt Arial;
+	color: #;
+	}
+
+.bordercolor {
+	background:#;
+	}
+
+.maincolor {
+	background:#; 
+	border:1px solid #;
+	}
+
+.button {
+	background:#;
+	}
+
+.titlebarcolor {
+	background:#;
+	}
+
+.titlefont {
+	font: normal normal bold 9pt/1em Arial;
+	color: #;
+	text-decoration:none;
+	}
+
+.copyrightfont, .copyrightfont a {
+	font: normal normal bold 9pt/1em Arial;
+	color: #;
+	text-decoration:none;
+	}
+
+</style>
+<style type="text/css"><!-- a:link{color:#ffffff;text-decoration:none}--></style> <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><script language="JavaScript">function tb5_makeArray(n){ this.length = n; return this.length;
+
+
+
+}
+
+
+
+tb5_messages = new tb5_makeArray(2);
+
+
+
+tb5_messages[0] = "Antonio";
+
+
+
+tb5_messages[1] = "HsH";
+
+
+
+tb5_rptType = 'infinite';
+
+
+
+tb5_rptNbr = 100;
+
+
+
+tb5_speed = 200;
+
+
+
+tb5_delay = 50;
+
+
+
+var tb5_counter=1;
+
+
+
+var tb5_currMsg=0;
+
+
+
+var tb5_stsmsg="";
+
+
+
+function tb5_shuffle(arr){
+
+
+
+var k;
+
+
+
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+
+
+
+}
+
+
+
+return arr;
+
+
+
+}
+
+
+
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+
+
+
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+
+
+
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_";
+
+
+
+}
+
+
+
+tb5_arr = tb5_shuffle(tb5_arr);
+
+
+
+function tb5_init(n){
+
+
+
+var k;
+
+
+
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+
+
+
+}
+
+
+
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+
+
+
+}
+
+
+
+function tb5_randomizetitle(){ tb5_init(0);
+
+
+
+}
+
+
+
+tb5_randomizetitle();</script><script>/*
+
+
+
+An object-oriented Typing Text script, to allow for multiple instances.
+
+
+
+A script that causes any text inside any text element to be "typed out", one letter at a
+
+
+
+time. Note that any HTML tags will not be included in the typed output, to prevent them
+
+
+
+from causing problems. Tested in Firefox v1.5.0.1, Opera v8.52, Konqueror v3.5.1, and IE
+
+
+
+v6.
+
+
+
+Browsers that do not support this script will simply see the text fully displayed from the
+
+
+
+start, including any HTML tags.
+
+
+
+Functions defined: TypingText(element, [interval = 100,] [cursor = "",] [finishedCallback = function()
+
+
+
+{return}]): Create a new TypingText object around the given element. Optionally specify a delay between characters of interval milliseconds. cursor allows users to specify some HTML to be appended to the end of the string whilst typing. Optionally, can also be a function which accepts the current text as an argument. This allows the user to create a "dynamic cursor" which changes depending on the latest character or the current length of the string. finishedCallback allows advanced scripters to supply a function to be executed on finishing. The function must accept no arguments. TypingText.run(): Run the effect. static TypingText.runAll(): Run all TypingText-enabled objects on the page.
+
+
+
+*/
+
+
+
+TypingText = function(element, interval, cursor, finishedCallback) { if((typeof document.getElementById == "undefined") || (typeof element.innerHTML ==
+
+
+
+"undefined")) { this.running = true; // Never run. return; } this.element = element; this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; }); this.interval = (typeof interval == "undefined" ? 100 : interval); this.origText = this.element.innerHTML; this.unparsedOrigText = this.origText; this.cursor = (cursor ? cursor : ""); this.currentText = ""; this.currentChar = 0; this.element.typingText = this; if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++; TypingText.all.push(this); this.running = false; this.inTag = false; this.tagBuffer = ""; this.inHTMLEntity = false; this.HTMLEntityBuffer = "";
+
+
+
+}
+
+
+
+TypingText.all = new Array();
+
+
+
+TypingText.currentIndex = 0;
+
+
+
+TypingText.runAll = function() { for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+
+
+}
+
+
+
+TypingText.prototype.run = function() { if(this.running) return; if(typeof this.origText == "undefined") { setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",
+
+
+
+this.interval); // We haven't finished loading yet. Have patience. return; } if(this.currentText == "") this.element.innerHTML = "";
+
+
+
+// this.origText = this.origText.replace(/<([^<])*>/, ""); // Strip HTML from text. if(this.currentChar < this.origText.length) { if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) { this.tagBuffer = "<"; this.inTag = true; this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) { this.tagBuffer += ">"; this.inTag = false; this.currentText += this.tagBuffer; this.currentChar++; this.run(); return; } else if(this.inTag) { this.tagBuffer += this.origText.charAt(this.currentChar); this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) { this.HTMLEntityBuffer = "&"; this.inHTMLEntity = true; this.currentChar++; this.run(); return; } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) { this.HTMLEntityBuffer += ";"; this.inHTMLEntity = false; this.currentText += this.HTMLEntityBuffer; this.currentChar++; this.run(); return; } else if(this.inHTMLEntity) { this.HTMLEntityBuffer += this.origText.charAt(this.currentChar); this.currentChar++; this.run(); return; } else { this.currentText += this.origText.charAt(this.currentChar); } this.element.innerHTML = this.currentText; this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof
+
+
+
+this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : ""); this.currentChar++; setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",
+
+
+
+this.interval); } else { this.currentText = ""; this.currentChar = 0; this.running = false; this.finishedCallback(); }
+
+
+
+}</script>
+</head>
+
+<body>
+<style type="text/css">     
+  body { 
+     
+     
+    
+     
+    background: black url("http://2.bp.blogspot.com/-Gc5k--PvR5s/Ue3pzaZxNmI/AAAAAAAABKA/SRaz-fAXYv0/s200/0_1_1.gif");
+     
+     
+     
+     
+    background-repeat: repeat;
+     
+    
+     
+     
+    background-position: center;
+     
+     
+     
+     
+    background-attachment: fixed;
+     
+     
+    }
+     
+     
+     
+     
+    </style>
+	<style>*{ font-family:tahoma; font-size:12; }
+
+input, textarea,select {
+
+    border: 1px solid #626262;
+
+}
+
+</style>
+<div align="center">
+	<form name="extractor" action="#" method="get">
+		<table class="maincolor" cellpadding="4" cellspacing="0" border="0" width="600">
+			<tr class="titlebarcolor" valign="middle"> 
+				<td align="left" class="titlefont">
+					<center><h3><font color = "white ">Paste disini</font></h3></center></td>
+				<td align="right" class="copyrightfont">
+					<!-- Please do not remove or modify the copyright notice. This is all I ask for in return -->
+					<center><h3><font color = "white ">Hasilnya</font></h3></center></td>
+			</tr>
+			<tr>
+				<td valign="top" align="center" width="50%">
+					<strong></strong><br />
+					<textarea  bgcolor="#"name="input" rows="8" cols="25" style="width:98%"></textarea></td>
+				<td valign="top" align="center" width="50%">
+					<strong></strong><br />
+					<textarea name="output" rows="8" cols="25" style="width:98%" readonly="readonly"></textarea></td>
+			</tr>
+			<tr>
+				<td valign="top" align="center">
+				
+					<script language="javascript" type="text/javascript">
+					<!--
+					if ((navigator.appName=="Microsoft Internet Explorer")&&(parseInt(navigator.appVersion)>=4)) document.write('<a href="#" onClick="paste();">Paste Input</a>');
+					else document.write('Masukan Sript nya');
+					// -->
+					</script></td>
+				<td valign="top" align="center">
+				
+					<script language="javascript" type="text/javascript">
+					<!--
+					if ((navigator.appName=="Microsoft Internet Explorer")&&(parseInt(navigator.appVersion)>=4)) document.write('<a href="#" onClick="copy();">Copy Output</a>');
+					else document.write('Hasil Yang Sudah Jadi');
+					// -->
+					</script></td>
+			</tr>
+			<tr>
+				<td valign="top" align="left" colspan="2" style="border-bottom:1px solid #999999;">
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="left">
+					<br />
+					<input type="button" class="button" value="Extract" onclick="findEmail();" /> 
+					<input type="reset" class="button" value="Reset" />&nbsp;&nbsp;&nbsp;
+					<a href="#" onclick="help();"><em>Info</em></a></td>
+				<td valign="top" align="right" nowrap="nowrap">
+					<br />
+					Jumlah yang keluar: <input name="count" size="5" readonly="readonly" /></td>
+			</tr>
+			<tr>
+				<td valign="top" align="left" colspan="2">
+					<fieldset title="Output Option">
+						<legend align="left"><strong>Setelan</strong></legend>
+						<br />
+						Alat pemisah:
+						<select name="sep">
+						<option value="new" selected="selected">New Line</option>
+						<option value="|">Pipe</option>
+						<option value=" : ">Colon</option>
+						<option value=", ">Coma</option>
+						<option value="other">Other</option>
+						</select>
+						<input type="text" name="othersep" size="3" onblur="checksep(this.value);" />
+						&nbsp;
+						<label for="sortbox"><input type="checkbox" name="sort" id="sortbox" />Urutkan abjad</label>
+						&nbsp;
+						<label for="casebox"><input type="checkbox" name="lowcase" id="casebox" checked="checked" />Menjadikan huruf kecil</label>
+						<br /><br />
+						Group: <input type="text" size="3" name="groupby" onblur="numonly(this.value);" /> Alamat <small>(kelompok akan dipisahkan oleh paragraf baru)</small>
+					</fieldset>
+					<br />
+					<fieldset title="Filter Option">
+						<legend align="left"><strong>Filter Option</strong></legend>
+						<br />
+						<select name="filter_type">
+							<option value="1" selected="selected">Only</option>
+							<option value="0">Do not</option>
+						</select>
+						extract address containing this string: <input type="text" size="20" name="string" />
+						<br />
+						<br />
+						Type of address to extract: 
+						<select name="address_type">
+							<option value="email" selected="selected">Email</option>
+							<option value="web">URL</option>
+						</select>
+					</fieldset>
+					<br />
+					<div align="right">
+						<a href="https://www.facebook.com/Antonio.HsH" title="Hacker Sakit Hati" target="_blank"><strong>Get latest version</strong></a>
+					</div></td>
+			</tr>
+		</table>
+	</form>
+	<!-- //// All we ask in return for this free tool is NOT to remove this link. Thank you. -->
+</div>
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" width="0" height="0">
+    <param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" />
+    <param name="bgcolor" value="#ffffff" />
+    <param name="FlashVars" value="mp3=https%3A//hshmp3oke.googlecode.com/svn/HsH-Login.mp3&amp;width=0&amp;height=0&amp;autoplay=1&amp;volume=200" />
+</object>
+</body>
+</html>
