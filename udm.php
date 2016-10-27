@@ -8,14 +8,89 @@ function entre2v2($text,$marqueurDebutLien,$marqueurFinLien,$i=1){
 }
  
 echo '<html><head>
-<title>HsH User Domain</title>
 <meta content="text/html; charset=utf-8">
 <meta name="keywords" content="Not Found" />
 <meta name="description" content="Not Found" />
 <meta name="author" content="Not Found" />
 <link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
+<style>
+body{
+	background-image: url(http://4.bp.blogspot.com/-RbaCuWyoN3c/U9-IWbh17wI/AAAAAAAAAto/I8zpRHIP0Gg/s1600/kbk29185-227a592.gif);
+	color: #FF9933;
+	text-align: center;
+	font-family: Century Gothic;
+	font-size: 14pt;
+	background-color: black;
+	font-weight: bold;
+	padding: 0px;
+}
+a {
+color:#fff;
+}
+a:hover {
+color:lime;
+}
+td, th, p, li,table{
+	background: #2e2b28;
+	border:1px solid #524f46;
+	text-align: center;
+	-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.result {
+padding: 15px;
+border: 1px solid #CCC;
+width: 500px;
+margin: 0 auto;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+input{
+	border: 1px solid;
+	overflow: hidden;
+	background: #2e2b28;
+	color: #FF9933;
+	-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+textarea{
+	border: 1px solid;
+	overflow: hidden;
+	background: #2e2b28;
+	color: #FF9933;
+	-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.main {
+font-family: Bookman Old Style, Century Gothic;
+font-size: 40pt;
+text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+}
+.button {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	color:#333;
+	background-color:#FA2;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:none;
+	font-family:Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:32px;
+	padding:4px 16px;
+	text-shadow:#FE6 0 1px 0
+}
+</style>
 </head><body>';
-echo '<div style="font-family: Iceland;font-size: 35pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">HsH User Domain</sub></div><br/>';
+echo '<div style="font-family: Iceland;font-size: 35pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">User Domain</sub></div><br/>';
  
 echo "<center>";
 $d0mains = @file('/etc/named.conf');
@@ -45,7 +120,7 @@ $dc++;
 }
 echo '</table>';
 $total = $dc;
-echo '<br><div class="result">User Domain Yang Ketemu = '.$total.'</h3><br />';
+echo '<br><div class="result">Domain Yang Ketemu = '.$total.'</h3><br />';
 echo '</center>';
 }else{
 $d0mains = @file('/etc/named.conf');
@@ -104,6 +179,7 @@ echo '</center>';
 echo "<div class='result'><i><font color='#FF0000'>ERROR</font><br><font color='#FF0000'>/var/named</font> or <font color='#FF0000'>etc/named.conf</font> Not Accessible!</i></div>";
 }
  
+echo "<br>&#169; <font color='#FF0000'>Ora Ketemu</font>";
 ?>
 
 <?php
@@ -111,11 +187,11 @@ echo "<div class='result'><i><font color='#FF0000'>ERROR</font><br><font color='
 echo '<style>body {background-color:#;color:#;}</style>
 REMOVE FILE & FOLDER<br>';
 
-$result=unlink("domain-20152.php");
+$result=unlink("domain-users.php");
 if($result){
-echo "<font color=green>File domain-20152.php BERHASIL DI HAPUS</font></br>";
+echo "<font color=lime>File domain-users.php BERHASIL DI HAPUS</font></br>";
 }else{
-echo "<font color=orange>Hati - Hati FIle gagal dihapus . . . ! ! !</br>";
+echo "<font color=#>Hati - Hati FIle gagal dihapus . . . ! ! !</br>";
 }
 
 ?>
