@@ -1,4 +1,4 @@
-<html>
+ <html>
 
 	<head>
 	<link rel="SHORTCUT ICON" href="http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif">
@@ -127,7 +127,7 @@ demo
 
 
 
-</form></center>* 
+</form></center>
 <? 
  set_time_limit(0); 
     error_reporting(0); 
@@ -221,4 +221,4 @@ foreach(explode("\n",$_POST['user']) as $user){
 
 
 
-?>
+?> 
