@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 $HackerSakitHati = 
 
@@ -151,59 +151,9 @@ input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
 
  .inputzbut:hover{border:1px solid white;}
 </style>
-<title>Hacker Sakit Hati </title><center>
 <div id="result">
 <br />
-<script language="JavaScript1.2">
-var message=" ..::[+  Copyright © 2014 Hacker Sakit Hati   +]::..  "// jangan pakai enter
-var neonbasecolor=" aqua "
-var neontextcolor=" white "
-var neontextcolor2="pink"  // kode warna kedua
-var flashspeed=1	// kecepatan flash neon, semakin kecil semakin cepat
-var flashingletters=10	// jumlah huruf yang tersorot oleh flash
-var flashingletters2=2	// jumlah warna di ekor flash
-var flashpause=1					
-///edit by http://googel-indonesia.blogspot.com/
-var n=0
-if (document.all||document.getElementById){
-document.write('<font color="'+neonbasecolor+'">')
-for (m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')
-}
-else
-document.write(message)
-function crossref(number){
-var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
-return crossobj
-}
-function neon(){
-//Change all letters to base color
-if (n==0){
-for (m=0;m<message.length;m++)
-crossref(m).style.color=neonbasecolor
-}
-//cycle through and change individual letters to neon color
-crossref(n).style.color=neontextcolor
 
-if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
-if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
-if (n<message.length-1)
-n++
-else{
-n=0
-clearInterval(flashing)
-setTimeout("beginneon()",flashpause)
-return
-}
-}
-function beginneon(){
-if (document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)
-}
-beginneon()
-</script>
-	
 
 
 </div></center>			
