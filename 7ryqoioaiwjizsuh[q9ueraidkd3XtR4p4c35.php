@@ -3,8 +3,8 @@
 <input type="TEXT" name="nomor" placeholder="4342564995890000">
 <input type="TEXT" name="exp" placeholder="01|16">
 <input type="TEXT" name="cvv" placeholder="600">
-<input type="TEXT" name="delim" value="|" size="1">
-<textarea " width="50" height="50" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
+<input type="TEXT" name="delim" value="|" size="1"><br>
+<textarea " width="250" height="250" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
 <div id="jumlah" style="display: none;"></div></form>
 
 
