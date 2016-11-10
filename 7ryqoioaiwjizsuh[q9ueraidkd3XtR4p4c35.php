@@ -5,8 +5,9 @@
 <input type="TEXT" name="cvv" placeholder="600">
 <input type="TEXT" name="delim" value="|" size="1">
 <div id="jumlah" style="display: none;"></div></form>
-
-
+<br>
+<textarea " width="550" height="550" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
+</center>
 
 <SCRIPT LANGUAGE="JavaScript1.2">
 document.onkeypress = verificaBotao;
@@ -125,10 +126,5 @@ function findN(formName){
 <center></center></center></a></center></tr></table></center></body></html></center></td></tr></table></td></ol></tr><tr>
 <table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:# ;border:1px solid #fff;">
 <center>
-<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html><center><div style="background-image:url(https://lh6.googleusercontent.com/-4hv9J9iHoTw/VcECr-PL4gI/AAAAAAAAACs/D9LPkvigfBE/w575-h10-no/graphicline.gif);"><marquee direction="right" scrollamount="100" align="center" behavior="alternate"> > > > > Hacker Sakit Hati | Extrap Credit Cart | < < < < </marquee></div></center>
-
-<center>
-<textarea " width="550" height="550" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
-
-</body></html></center>
+<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html><center><div style="background-image:url(https://lh6.googleusercontent.com/-4hv9J9iHoTw/VcECr-PL4gI/AAAAAAAAACs/D9LPkvigfBE/w575-h10-no/graphicline.gif);"><marquee direction="right" scrollamount="100" align="center" behavior="alternate"> > > > > Hacker Sakit Hati | Extrap Credit Cart | < < < < </marquee></div></body></html></center>
 
