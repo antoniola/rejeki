@@ -1,12 +1,11 @@
  <html><center>
+<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html>
 <form name="InpForm" onsubmit="return validateInput(this);">
 <input type="TEXT" name="nomor" placeholder="4342564995890000">
 <input type="TEXT" name="exp" placeholder="01|16">
 <input type="TEXT" name="cvv" placeholder="600">
 <input type="TEXT" name="delim" value="|" size="1"><br>
 <textarea "="" width="500 " height="500" name="hasil" style="background-color: rgb(0, 0, 0); border: 2px inset grey; background-image: url(&quot;https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png&quot;); background-position: center center; width: 486px; height: 447px;"></textarea></center>
-<center>
-<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html>
 <div id="jumlah" style="display: none;"></div></form>
 
 
