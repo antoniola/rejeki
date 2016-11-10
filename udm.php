@@ -1,4 +1,4 @@
- <?php
+<?php
 
 @ini_set('display_errors',0);
 function entre2v2($text,$marqueurDebutLien,$marqueurFinLien,$i=1){
@@ -12,85 +12,7 @@ echo '<html><head>
 <meta name="keywords" content="Not Found" />
 <meta name="description" content="Not Found" />
 <meta name="author" content="Not Found" />
-<link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
-<style>
-body{
-	background-image: url(#);
-	color: #;
-	text-align: center;
-	font-family: Century Gothic;
-	font-size: 14pt;
-	background-color: #;
-	font-weight: bold;
-	padding: 0px;
-}
-a {
-color:#;
-}
-a:hover {
-color:lime;
-}
-td, th, p, li,table{
-	background: #;
-	border:1px solid #;
-	text-align: center;
-	-moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
-}
-.result {
-padding: 15px;
-border: 1px solid #;
-width: 500px;
-margin: 0 auto;
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-}
-input{
-	border: 1px solid;
-	overflow: hidden;
-	background: #;
-	color: #;
-	-moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
-}
-textarea{
-	border: 1px solid;
-	overflow: hidden;
-	background: #;
-	color: #;
-	-moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
-}
-.main {
-font-family: Bookman Old Style, Century Gothic;
-font-size: 40pt;
-text-shadow: 0px 0px 6px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0), 0px 0px 5px rgb(255, 0, 0);
-color: rgb(255, 255, 255);
-}
-.button {
-	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	color:#;
-	background-color:#;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border:none;
-	font-family:Arial,sans-serif;
-	font-size:16px;
-	font-weight:700;
-	height:32px;
-	padding:4px 16px;
-	text-shadow:# 0 1px 0
-}
-</style>
 </head><body>';
-echo '<div style="font-family: Iceland;font-size: 35pt;text-shadow: 0 0 6px #, 0 0 5px #, 0 0 5px #;color: #">User Domain</sub></div><br/>';
  
 echo "<center>";
 $d0mains = @file('/etc/named.conf');
