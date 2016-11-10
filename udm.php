@@ -15,7 +15,7 @@ echo '<html><head>
 <link href="http://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
 <style>
 body{
-	background-image: url(http://2.bp.blogspot.com/-Gc5k--PvR5s/Ue3pzaZxNmI/AAAAAAAABKA/SRaz-fAXYv0/s200/0_1_1.gif);
+	background-image: url(#);
 	color: #;
 	text-align: center;
 	font-family: Century Gothic;
