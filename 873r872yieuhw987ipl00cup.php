@@ -2,7 +2,7 @@
 <font class="hk2" style="text-shadow: 1px -1px 8px;"><style>
 body {
 	font-family: 'Arial'; font-size:12px;color:lime;
-	background-image: url('http://3.bp.blogspot.com/-D6nQQ3d_wfw/Ts31QI5aQPI/AAAAAAAAAgA/mMEBDufqDpk/s1600/0_1_1.gif');	}
+	background-image: url('#');	}
 	hr {border:inset 1px white}
 
 #form-container
@@ -137,7 +137,7 @@ echo "<br />";
 echo'<center><a href="Hasil.txt">View Hasil Drupal Sites</a></cenrer>';
 ?></td></tr></table><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:# ;border:1px solid #fff;">
 <center><script language="JavaScript1.2"> 
-var message=" ..::[+ © Copyright 2016 | Hacker Sakit Hati  +]::..  "// jangan pakai enter 
+var message=" ..::[+ © Copyright 2015 | Hacker Sakit Hati  +]::..  "// jangan pakai enter 
 var neonbasecolor=" white" 
 var neontextcolor=" aqua" 
 var neontextcolor2="purple"  // kode warna kedua 
@@ -184,7 +184,7 @@ if (document.all||document.getElementById)
 flashing=setInterval("neon()",flashspeed) 
 } 
 beginneon() 
-</script></b><center></center></center></a></center></tr></table></center></body></html></center></td></tr></table></td></ol></tr><tr></tr></table></center></body></html><br><center><div style="background-image:url(https://lh6.googleusercontent.com/-4hv9J9iHoTw/VcECr-PL4gI/AAAAAAAAACs/D9LPkvigfBE/w575-h10-no/graphicline.gif);"><marquee direction="right" scrollamount="100" align="center" behavior="alternate"> > > > > Drupal Mass Exploiter By Hacker Sakit Hati < < < < </marquee></div></center><object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" width="0" height="0"><param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" /><param name="bgcolor" value="#ffffff" /><param name="FlashVars" value="mp3=https%3A//hshmp3oke.googlecode.com/svn/HsH-Login.mp3&amp;width=0&amp;height=0&amp;autoplay=1&amp;volume=200" /></object></body></html>Dorks:<br>
+</script></b><center></center></center></a></center></tr></table></center></body></html></center></td></tr></table></td></ol></tr><tr></tr></table></center></body></html><br><center><div style="background-image:url(https://lh6.googleusercontent.com/-4hv9J9iHoTw/VcECr-PL4gI/AAAAAAAAACs/D9LPkvigfBE/w575-h10-no/graphicline.gif);"><marquee direction="right" scrollamount="100" align="center" behavior="alternate"> > > > > Drupal Mass Exploiter By Hacker Sakit Hati < < < < </marquee></div></center></body></html>Dorks:<br>
 inurl:?q=node/<br>
 intext:Powered By Drupal<br>
 inurl:"node?page="<br>
