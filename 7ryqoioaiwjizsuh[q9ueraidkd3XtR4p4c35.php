@@ -8,10 +8,6 @@
 
 
 
-
-
-
-
 <SCRIPT LANGUAGE="JavaScript1.2">
 document.onkeypress = verificaBotao;
 document.onkeydown = verificaBotao;
@@ -131,8 +127,8 @@ function findN(formName){
 <center>
 <input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html><center><div style="background-image:url(https://lh6.googleusercontent.com/-4hv9J9iHoTw/VcECr-PL4gI/AAAAAAAAACs/D9LPkvigfBE/w575-h10-no/graphicline.gif);"><marquee direction="right" scrollamount="100" align="center" behavior="alternate"> > > > > Hacker Sakit Hati | Extrap Credit Cart | < < < < </marquee></div></center>
 
-<br>
-<textarea " width="250" height="250" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
+<center>
+<textarea " width="550" height="550" name="hasil"style="background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-position:center;"></textarea> 
 
-</body></html>
+</body></html></center>
 
