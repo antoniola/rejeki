@@ -1,4 +1,4 @@
-<head>
+ <head>
 <style>body,table{background:  ; font-family:Verdana,tahoma; color: Darkviolet ; font-size:10px } A:link {text-decoration: none;color: aqua;} A:active {text-decoration: none;color: aqua;} A:visited {text-decoration: none;color: lime;} A:hover {text-decoration: underline; color: Fuchsia;} #new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;} input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
 input[type=submit]{ padding: 3px; color: #;
 font-weight: bold;
@@ -19,7 +19,7 @@ background-image: linear-gradient(to bottom, #, #);
 </head>
 <?php
 echo "<center></center><div id=result>";
-echo "<center><br><form><input type='text' size='60' value='bawok.com' name='pentil' /><input type='hidden' name='action' value='iploocroot'> &nbsp;<input type='submit' value='search'></form></center>";
+echo "<center><br><form><input type='text' size='60' value='bawok.com' name='pentil' /><input type='hidden' name='action' value='pentil'> &nbsp;<input type='submit' value='search'></form></center>";
 if(isset($_GET["pentil"]))
 {
 $site = $_GET["pentil"];
