@@ -1,4 +1,4 @@
- </head><body><div id="form-container"><div align="center" class="style2"><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#;border:2px inset white;">>-|I|-> HsH Extrap CC <-|I|-<</td></tr></table></div><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#000;border:2px inset grey;background-image:url(https://3.bp.blogspot.com/-MjJEz7wdn90/V0SufHGOmKI/AAAAAAAAAEs/5d3efodxsDwiADESfhACoo9ZH1pl1nESQCLcB/s1600/13282056_278448019158223_1304933576_n.png);background-repeat:repeat;background-position:top;"><html>
+ </head><body><div id="form-container"><div align="center" class="style2"><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:#;border:2px inset white;">>-|I|-> HsH Extrap CC <-|I|-<</td></tr></table></div><table width="100%" border="0"><tr><html>
 <form name="InpForm" onsubmit="return validateInput(this);">
 <input type="TEXT" name="nomor" placeholder="4342564995890000">
 <input type="TEXT" name="exp" placeholder="01|16">
