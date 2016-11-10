@@ -2,7 +2,7 @@
 <font class="hk2" style="text-shadow: 1px -1px 8px;"><style>
 body {
 	font-family: 'Arial'; font-size:12px;color:lime;
-	background-image: url('#');	}
+	background-image: url('http://3.bp.blogspot.com/-D6nQQ3d_wfw/Ts31QI5aQPI/AAAAAAAAAgA/mMEBDufqDpk/s1600/0_1_1.gif');	}
 	hr {border:inset 1px white}
 
 #form-container
