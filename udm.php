@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 @ini_set('display_errors',0);
 function entre2v2($text,$marqueurDebutLien,$marqueurFinLien,$i=1){
@@ -118,3 +118,4 @@ echo "<font color=#>Hati - Hati FIle gagal dihapus . . . ! ! !</br>";
 
 ?>
 
+d
