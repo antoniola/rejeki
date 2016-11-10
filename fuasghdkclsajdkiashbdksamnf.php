@@ -1,4 +1,4 @@
-<?
+ <?
 /*coder : Indonesia Croot Coder*/
 @session_start();
 @error_reporting(0);
@@ -75,89 +75,6 @@ A:visited {text-decoration: none;color: lime;}
 A:hover {text-decoration: underline; color: lime;}
 #new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;}
 input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
-</style>
-<style type="text/css">
-<!--
-.style1 {
-        font-family: Geneva, Arial, Helvetica, sans-serif;
-        font-size: 12px;
-}
-body{
-margin:0px;
-}
-.bgup {
-background: url(data:image/gif;base64,R0lGODlhMgAqALMLABcXFyYmJjAwMB0dHSAgIBoaGhkZGRQUFCQkJBwcHAAAAP///wAAAAAAAAAAAAAAACH+A0c0NAAh/wtORVRTQ0FQRTIuMAMBAAAAIfkEBQoACwAsAAAAADIAKgAABP9QyUmrvTjbk44sSCElycR5CoKY3Re6onJK6mQot0LoUynduZQNJ9nteEfgZDVS+FZMZ09Kmz6FQmbJhyXmjNMfsSr+8pDlJQsFiiUCAMksJRjIW4o27I5CCDSAgYKDhIWBNSNcc3oyeHMkE4yPXF1UXkVnSpdNmEljlpVcW1VaVKOcWU2iFFGWmmCbmpawslx+dk5wfHuNKI+6eS+9IwGGxsfIyRiTS1GQuylRc4vCc7WsFFyyUZqvmWOnoK2rtlaqpOeb4tlDQdxj3p45v3F0uG/1c7fQ1DEcygADCswgCc+zYDEKojg4DQ8jWp+4wIIYRBu8MbCgpLOkMZWUVemATnWkGAaNyWtpNsFSSKweI5a58jly2GqgzZvGGOJBNKwnT2bQeLr69C7HtnYlj5YM58wUR3OomLJL2aUbUaSolMYMWoffzq498XHFSbasoIMw9UVJu1ManlnfjF7tlFIrSo+npKL7uLEpyJMX3U0gqa5oS14N+4BlqxjXP7PHIgAAIfkEBQoACwAsAQABADAAKAAABP8wJUURUivrvdRJXChuikRNlHJRhmKErguXo3imajqBXEn3v1rGR6ykWq8ecsYTakoBgLN3mFqv2Kx2y918DpQCokD5VlYKMdmTALPdltSXtBQaYXVSjiV77mA7KReAQU97Pk0deSN3Sn16aEgJUWVtYWOVcAIDl2tmbxWbXaOkpVcqaHMhYllncpYlKJGPTwQYWIK3erI6hUODuI27RnxJJLatwoYTCJtlpiTNnG/Q1dbXCxMiJpknKGljrS03TLrLKbYErd/aQO3DRgjiveXlFOlZsJNTHtj+/wBXheuhxtsrNwXmGbNyoxgec4QS8Svyp8c7G4smfsuoCCIVWAU9oQDodIIStYAoU17BBCpWipAftLRUg8+dxxgLh/h4OC7dBXk2I9azSORnzWE8h9KhFeLTpJHgPEl00i1qBAAh+QQFCgALACwBAAEAMAAoAAAE/7Cgsqq9OOudEVIEqCgGOSqJko3fSnCa8n1oPaarrGI6zIchU+m2u7CKFpBvyWw6n9CodErFHBKHW2okKWhP16zMd1yVhrXcVnhCwMq81BrHs9XWbg7ceD7RjXZ9e08KVxtdNwEAI2EsVY+QkU2NhVgsNJUxiCh/ZIKCOiNnLiJEoiR6ckR4figrM62rep8mR6cGpEGBJAkBMZSUCAIDjAmSx8jJVV1LCcZSQrlmta7Qcq9jcXadS6WjP0o8oM/K5ebn6BdrhiuUmx5Ib3a7uOKodS1MpvvX2uRJPfTNW/ONzz1A+ZR5qSTmnYB0ECNWKCbGWbwFMjBRskgozLiLgx8m0tNnQBWRHAkBzqlmBNadjyhBjnRiCYUiFsPMhYkAACH5BAUKAAsALAEAAQAwACgAAAT/MCW1ql0F3c2XUlonftOnlAqRcorRsiAlbqR5mgjITgmcz7SbCaUisFwGH3DJbDqf0Kh02vwcEodPpvBB/JhYEmqrRXAV14OLWmm5a5/iscVj31CoXOhyX9uRQyZyNEhpZWcIAmwdW4uOj5CRCgVVXjJObzcsRYE+JoBdQDUsep1BOTV5opo0nKOnn5l6UFmTj4mRubq7OyhpUDpUr3wqTF2XlaZ8s6tfmCrDFinIIzG8T3vX2tsbYWjehiDZ0uHhllZYfH7N1B6goDEfSHwTxtY0PKk4gT3S6zPH5rhwMzAewUQD0NUq5w0XC4a1EFrhRrGixYsYM+5KQQaEootmAiIAADs=);
-}
-
-
-.uibutton { 
-    position: relative; 
-    z-index: 1;
-    overflow: visible; 
-    display: inline-block; 
-    padding: 0.3em 0.6em 0.375em; 
-    border: 1px solid Lime; 
-    border-bottom-color: Lime;
-	
-    margin: 0;
-    text-decoration: none; 
-    text-align: center;
-    font: bold 11px/normal 'lucida grande', tahoma, verdana, arial, sans-serif; 
-    white-space: nowrap; 
-    cursor: pointer; 
-    /* outline: none; */
-    color: #f9f9f9; 
-    background-color: #eee;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(Lime), to(Lime));
-    background-image: -moz-linear-gradient(Lime, Lime);
-    background-image: -o-linear-gradient(Lime, Lime);
-    background-image: linear-gradient(Lime, Lime);
-
-    /* IE hacks */
-
-    *display: inline; 
-
-}
-
-.uibutton:hover,
-.uibutton:focus,
-.uibutton:active {
-    border-color: Lime Lime Lime Lime;
-}
-
-.uibutton:active {
-    border-color: Lime;
-    background: Lime;
-    filter: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-/* overrides extra padding on button elements in Firefox */
-.uibutton::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-
-
--->
-</style>
-<style type="text/css">
-<!--
-.style1 {
-        font-size: 10px;
-        font-family: Geneva, Arial, Helvetica, sans-serif;
-		body,table{background:  ; font-family:Verdana,tahoma; color: lime ; font-size:10px }
-A:link {text-decoration: none;color: aqua;}
-A:active {text-decoration: none;color: aqua;}
-A:visited {text-decoration: none;color: lime;}
-A:hover {text-decoration: underline; color: lime;}
-#new,input,table,td,tr,#gg{border-style:solid;text-decoration:bold ;}
-input:hover,tr:hover,td:hover{background-color:  ; color: aqua;}
-}
--->
 </style>
 </head>
 <body bgcolor="#f9f9f9" class="bgup">
