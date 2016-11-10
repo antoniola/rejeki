@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 @ini_set('display_errors',0);
 function entre2v2($text,$marqueurDebutLien,$marqueurFinLien,$i=1){
@@ -20,7 +20,7 @@ body{
 	text-align: center;
 	font-family: Century Gothic;
 	font-size: 14pt;
-	background-color: black;
+	background-color: #;
 	font-weight: bold;
 	padding: 0px;
 }
