@@ -1,5 +1,4 @@
  <html><center>
-<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html>
 <form name="InpForm" onsubmit="return validateInput(this);">
 <input type="TEXT" name="nomor" placeholder="4342564995890000">
 <input type="TEXT" name="exp" placeholder="01|16">
@@ -130,4 +129,5 @@ function findN(formName){
 </td></tr></table><table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:# ;border:1px solid #fff;">
 <center></center></center></a></center></tr></table></center></body></html></center></td></tr></table></td></ol></tr><tr>
 <table width="100%" border="0"><tr><td align="center" style="width:50%;background-color:# ;border:1px solid #fff;">
-
+<center>
+<input type="BUTTON" name="buat" onclick="findN(InpForm)" value="Extrap"></tr></table></center></tr></table></center></body></html>
