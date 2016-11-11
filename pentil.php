@@ -164,6 +164,6 @@ echo "<a href='?y&#61;$path' target='_blank' style='font-weight:bold; color:#;'>
 }
 echo "<br>";
 echo '</center></body></html>';
-exit;
+
 }
 ?>
