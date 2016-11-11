@@ -1,8 +1,3 @@
- 
-<?php
-/*
-CrootCoder
-*/
 
 @set_time_limit(0);
 	echo'
@@ -326,4 +321,4 @@ CrootCoder
 		}
 	}
 
-?>
+
