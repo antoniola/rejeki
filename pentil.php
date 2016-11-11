@@ -1,8 +1,8 @@
  echo "<center></center><div id=result>";
-echo "<center><br><form><input type='text' size='60' value='bawok.com' name='pentil' /><input type='hidden' name='action' value='pentil'> &nbsp;<input type='submit' value='search'></form></center>";
+echo "<center><br><form><input type='text' size='60' value='bawok.com' name='pentil' /><input type='hidden' name='action' value='iploocroot'> &nbsp;<input type='submit' value='search'></form></center>";
 if($_GET['do'] == 'pentil')
 {
-$site = $_GET['pentil'];
+$site = $_GET["pentil"];
 $nn = "http://domains.yougetsignal.com/domains.php";
 
 //Curl Function
