@@ -1,8 +1,6 @@
- echo "<center></center><div id=result>";
-echo "<center><br><form><input type='text' size='60' value='bawok.com' name='pentil' /><input type='hidden' name='action' value='iploocroot'> &nbsp;<input type='submit' value='search'></form></center>";
-if($_GET['do'] == 'pentil')
-{
-$site = $_GET["pentil"];
+ <?php
+echo "<center></center><div id=result>";
+echo "<center><br><form><input type='text' size='60' value='bawok.com' /><input type='hidden' name='action' value='pentil'> &nbsp;<input type='submit' value='search'></form></center>";
 $nn = "http://domains.yougetsignal.com/domains.php";
 
 //Curl Function
@@ -23,3 +21,5 @@ print "<tr><td><a style=\"color:#0076B1;\" href='$lnk' target=_blank>$lnk</a></t
 echo "</table>";
 curl_close($ch);
 }
+
+?>
