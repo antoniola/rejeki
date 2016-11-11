@@ -1,6 +1,4 @@
  <?php 
-if ( isset($_GET['CpC']) )
-{
 /**
 					Hacked By Hacker Sakit Hati
 
