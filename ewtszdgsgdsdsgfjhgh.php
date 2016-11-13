@@ -56,9 +56,9 @@
      
     			unlink($targetzip);
     		}
-    		$message = "<font color=lime'>File Zip Mu Berhasil Di Upload</font>";
+    		$message = "<font color='lime'>File Zip Mu Berhasil Di Upload</font>";
     	} else {	
-    		$message = "<font color=red'>Server Goblok iki G iso Upload Cok</font>";
+    		$message = "<font color='red'>Server Goblok iki G iso Upload Cok</font>";
     	}
     }
      
@@ -74,4 +74,4 @@
     </form>
 	</center>
     </body>
-    </html> 
+    </html>
