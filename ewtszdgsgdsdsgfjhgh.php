@@ -56,9 +56,9 @@
      
     			unlink($targetzip);
     		}
-    		$message = "File Zip Mu Berhasil Di Upload";
+    		$message = "<font color=lime'>File Zip Mu Berhasil Di Upload</font>";
     	} else {	
-    		$message = "Server Goblok iki G iso Upload Cok";
+    		$message = "<font color=red'>Server Goblok iki G iso Upload Cok</font>";
     	}
     }
      
@@ -70,7 +70,6 @@
     <?php if($message) echo "<p>$message</p>"; ?>
     <form enctype="multipart/form-data" method="post" action="">
     <label>Silahkan Masukan File Zip: <input type="file" name="zip_file" /></label>
-    <br />
     <input type="submit" name="submit" value="Upload" />
     </form>
 	</center>
