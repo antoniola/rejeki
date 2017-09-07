@@ -1,20 +1,16 @@
-var my_time;
-$(document).ready(function() {
-  pageScroll();
-  $("#contain").mouseover(function() {
-    clearTimeout(my_time);
-  }).mouseout(function() {
-    pageScroll();
-  });
-});
-
-function pageScroll() {  
-	var objDiv = document.getElementById("contain");
-  objDiv.scrollTop = objDiv.scrollTop + 1;  
-  $('p:nth-of-type(1)').html('scrollTop : '+ objDiv.scrollTop);
-  $('p:nth-of-type(2)').html('scrollHeight : ' + objDiv.scrollHeight);
-  if (objDiv.scrollTop == (objDiv.scrollHeight - 100)) {
-    objDiv.scrollTop = 0;
-  }
-  my_time = setTimeout('pageScroll()', 25);
-}
+  function Pilih1(dropDown) {
+        var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+        document.getElementById("sender-name").value = selectedValue;
+      }
+      function Pilih2(dropDown) {
+        var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+        document.getElementById("sender-email").value = selectedValue;
+      }
+      function Pilih3(dropDown) {
+        var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+        document.getElementById("subject").value = selectedValue;
+      }
+      function Pilih4(dropDown) {
+        var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+        document.getElementById("xmailer").value = selectedValue;
+      }
