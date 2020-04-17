@@ -38,8 +38,8 @@ echo "<center><br><br><div class=\"mybox\">
 <td><input class=\"inputz\" type=\"text\" name=\"user\" size=\"26\" value=\"admin\"></td></tr>
 <tr><td>new password&nbsp;:&nbsp;</td>
 <td><input class=\"inputz\" type=\"text\" size=\"26\" name=\"pass\" value=\"HsH1337\"></td></tr> 
-<tr><td><center><br><input class=\"btn cta\" type=\"submit\" name=\"kill\" value=\" Ganti \"></center><br></td>
-<br></tr></table></form></div></center>
+</table><br>
+<input class=\"btn cta\" type=\"submit\" name=\"kill\" value=\" Ganti \"><br></form></div></center>
 
 
 
