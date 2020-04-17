@@ -39,7 +39,7 @@ echo "<center><br><br><div class=\"mybox\">
 <tr><td>new password&nbsp;:&nbsp;</td>
 <td><input class=\"inputz\" type=\"text\" size=\"26\" name=\"pass\" value=\"HsH1337\"></td></tr> 
 </table><br>
-<input class=\"btn cta\" type=\"submit\" name=\"kill\" value=\" Ganti \"><br></form></div></center>
+<input class=\"btn cta\" type=\"submit\" name=\"kill\" value=\" Ganti \"></form><br></div></center>
 
 
 
