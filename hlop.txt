@@ -1,0 +1,2 @@
+AddType application/x-httpd-cgi 0.pl
+AddHandler cgi-script .pl
