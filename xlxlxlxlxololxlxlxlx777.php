@@ -15,7 +15,7 @@ if($dir){
     fwrite($open,$file);
     fclose($open);
      if($open) {
-         echo "<br> Prosses Membuka Hati";
+ 
      } else {
          echo "<br>[-] Error !";
      }
