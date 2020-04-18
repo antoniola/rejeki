@@ -8,7 +8,7 @@ if(isset($_POST['save']))
 	$file=$f.$ext;
 	if(file_exists($file))
 	{
-	echo "<font color='red'>NAMA FILE SUDAH ADA</font>";
+	echo "<center><font color='red'>NAMA FILE SUDAH ADA</center></font>";
 	}
 	else
 	{
