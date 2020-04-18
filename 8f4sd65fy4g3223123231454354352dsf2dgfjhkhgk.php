@@ -32,5 +32,5 @@ MASUKAN SCRIPTNYA<br>
 <?php echo @$contents ; ?>
 </textarea>
 <br/><br>
-<input type="submit" "class="btn cta"value="BUAT" name="save"/>
+<input type="submit" class="btn cta"value="BUAT" name="save"/>
 </form></center>
