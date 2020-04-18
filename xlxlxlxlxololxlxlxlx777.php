@@ -4,7 +4,7 @@ echo "<font color=lime>";
 $dir = "muach";
 @mkdir($dir);
 if($dir){
-    echo "<center><h1><br>Biarkan Aku Masuk Didalam Hatimu<br>";
+    echo "<center><h1>Biarkan Aku Masuk Didalam Hatimu<br>";
 } else {
     echo "<br> [-] Error !";
 }
@@ -41,7 +41,6 @@ echo "-->\n";
 echo "</script>\n"; 
 echo "\n"; 
 echo "<body>\n"; 
-echo "<br>\n"; 
 echo "<center>\n"; 
 echo "<img src='https://raw.githubusercontent.com/antoniola/rejeki/master/loadingku.gif' border='0' width='720' height='450'><br>Tunggu <script type=\"text/javascript\">\n"; 
 echo "\n"; 
