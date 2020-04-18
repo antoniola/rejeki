@@ -1,5 +1,4 @@
-<?php
-// NGELUARIN DOMAIN
+
 @ini_set('display_errors',0);
 function entre2v2($text,$marqueurDebutLien,$marqueurFinLien,$i=1){
     $ar0=explode($marqueurDebutLien, $text);
@@ -113,8 +112,6 @@ echo " File domain-users.php BERHASIL DI HAPUS</font></br>";
 echo "Hati - Hati FIle gagal dihapus . . . ! ! !</br>";
 }
  
-exit;
 
-?>
 
  
