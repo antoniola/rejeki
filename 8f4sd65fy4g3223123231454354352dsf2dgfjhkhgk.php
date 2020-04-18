@@ -15,9 +15,10 @@ if(isset($_POST['save']))
 	$fo = fopen($file,"w");
 	fwrite($fo,$data);
 	echo "<center>FILE DATA BERHASIL DI BUAT</center><br><br>";
+	exit;
 	}
 }
-exit;
+
 
 ?>
 <style type='text/css'>
